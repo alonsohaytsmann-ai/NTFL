@@ -77,6 +77,12 @@
     
     <main class="container py-3 py-md-4">
       
+      <div class="d-flex justify-content-end mb-2 gap-2">
+        <button class="btn btn-sm btn-outline-light px-3" onclick="mudarIdioma('pt')">🇧🇷 PT</button>
+        <button class="btn btn-sm btn-outline-light px-3" onclick="mudarIdioma('en')">🇺🇸 EN</button>
+        <button class="btn btn-sm btn-outline-light px-3" onclick="mudarIdioma('es')">🇪🇸 ES</button>
+      </div>
+
       <div class="position-relative overflow-hidden p-3 p-md-4 mb-4 text-center rounded-4" style="background-color: rgba(110, 36, 17, 0.767);">
         <div class="col-12 col-md-6 p-2 mx-auto rounded" style="background-color: burlywood; border-radius: 20px;">
           <img src="NTFL-logo.png" class="img-fluid" style="max-height: 200px;" alt="Logo NTFL">
@@ -85,49 +91,34 @@
 
       <ul class="nav nav-pills justify-content-center mb-4 flex-wrap" id="pills-tab" role="tablist">
         <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Geral / Equipe</button>
+          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" data-i18n="tab_geral">Geral / Equipe</button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="pills-gameplay-tab" data-bs-toggle="pill" data-bs-target="#pills-gameplay" type="button" role="tab" aria-controls="pills-gameplay" aria-selected="false">Gameplay & Cenários</button>
+          <button class="nav-link" id="pills-gameplay-tab" data-bs-toggle="pill" data-bs-target="#pills-gameplay" type="button" role="tab" data-i18n="tab_gameplay">Gameplay & Cenários</button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="pills-storyboard-tab" data-bs-toggle="pill" data-bs-target="#pills-storyboard" type="button" role="tab" aria-controls="pills-storyboard" aria-selected="false">Storyboard</button>
+          <button class="nav-link" id="pills-storyboard-tab" data-bs-toggle="pill" data-bs-target="#pills-storyboard" type="button" role="tab" data-i18n="tab_storyboard">Storyboard</button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="pills-docs-tab" data-bs-toggle="pill" data-bs-target="#pills-docs" type="button" role="tab" aria-controls="pills-docs" aria-selected="false">Documentação & GitHub</button>
+          <button class="nav-link" id="pills-docs-tab" data-bs-toggle="pill" data-bs-target="#pills-docs" type="button" role="tab" data-i18n="tab_docs">Documentação & GitHub</button>
         </li>
       </ul>
 
       <div class="tab-content" id="pills-tabContent">
         
-        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" tabindex="0">
           <div class="row g-4 bg-verde-container p-3 p-md-4 rounded">
             <div class="col-12 col-lg-6">
               <div class="card-bg-custom p-3 text-center rounded h-100 d-flex flex-column">
                 <div class="retangulos">
-                  <h3 class="texto-pixelado2 m-0">Equipe</h3>
+                  <h3 class="texto-pixelado2 m-0" data-i18n="equipe_title">Equipe</h3>
                 </div>
                 <div class="bg-dark mx-auto mt-2 w-100 p-3 flex-grow-1 rounded-bottom" style="min-height: 280px;">
-                  <div class="membro-equipe justify-content-start">
-                    <img src="foto-tiago.png" class="foto" alt="Tiago">
-                    <span>Tiago Tramontin</span>
-                  </div>
-                  <div class="membro-equipe justify-content-end text-end">
-                    <span>Leonardo Carvalho</span>
-                    <img src="foto-alonso.png" class="foto" alt="Leonardo">
-                  </div>
-                  <div class="membro-equipe justify-content-start">
-                    <img src="foto-leonardo.png" class="foto" alt="Alonso">
-                    <span>Alonso Haytsmann</span>
-                  </div>
-                  <div class="membro-equipe justify-content-end text-end">
-                    <span>Rodrigo Santos</span>
-                    <img src="foto-rodrigo.png" class="foto" alt="Rodrigo">
-                  </div>
-                  <div class="membro-equipe justify-content-start">
-                    <img src="foto-erick.png" class="foto" alt="Eric">
-                    <span>Eric Araújo</span>
-                  </div>
+                  <div class="membro-equipe justify-content-start"><img src="foto-tiago.png" class="foto"><span>Tiago Tramontin</span></div>
+                  <div class="membro-equipe justify-content-end text-end"><span>Leonardo Carvalho</span><img src="foto-alonso.png" class="foto"></div>
+                  <div class="membro-equipe justify-content-start"><img src="foto-leonardo.png" class="foto"><span>Alonso Haytsmann</span></div>
+                  <div class="membro-equipe justify-content-end text-end"><span>Rodrigo Santos</span><img src="foto-rodrigo.png" class="foto"></div>
+                  <div class="membro-equipe justify-content-start"><img src="foto-erick.png" class="foto"><span>Eric Araujo</span></div>
                 </div>
               </div>
             </div>
@@ -135,22 +126,22 @@
             <div class="col-12 col-lg-6">
               <div class="card-bg-custom p-3 text-center rounded h-100 d-flex flex-column">
                 <div class="retangulos">
-                  <h3 class="texto-pixelado2 m-0">Sinopse</h3>
+                  <h3 class="texto-pixelado2 m-0" data-i18n="sinopse_title">Sinopse</h3>
                 </div>
                 <div class="bg-dark mx-auto mt-2 w-100 p-4 flex-grow-1 rounded-bottom d-flex align-items-center justify-content-center" style="min-height: 280px;">
-                  <p class="texto-pixelado3 m-0 text-center">Sua mãe sai e deixa uma lista de tarefas ecológicas para realizar, e você como um bom filho deve terminá-las antes que ela chegue!</p>
+                  <p class="texto-pixelado3 m-0 text-center" data-i18n="sinopse_text">Sua mãe sai e deixa uma lista de tarefas ecológicas para realizar, e você como um bom filho deve terminá-las antes que ela chegue!</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="tab-pane fade" id="pills-gameplay" role="tabpanel" aria-labelledby="pills-gameplay-tab" tabindex="0">
+        <div class="tab-pane fade" id="pills-gameplay" role="tabpanel" tabindex="0">
           <div class="row g-4 bg-verde-container p-3 p-md-4 rounded">
             <div class="col-12 col-md-6">
               <div class="card-bg-custom p-3 text-center rounded h-100">
                 <div class="retangulos">
-                  <h2 class="texto-pixelado2 m-0">Gameplay</h2>
+                  <h2 class="texto-pixelado2 m-0" data-i18n="gameplay_title">Gameplay</h2>
                 </div>
                 <div class="retangulos2 mx-auto mt-2 w-100 bg-dark rounded-bottom" style="height: 350px;">
                   <video class="w-100 h-100 rounded-bottom" style="object-fit: contain;" controls muted loop poster="Captura de tela 2026-11-05 003424.png">
@@ -162,32 +153,18 @@
             <div class="col-12 col-md-6">
               <div class="card-bg-custom p-3 text-center rounded h-100">
                 <div class="retangulos">
-                  <h2 class="texto-pixelado2 m-0">Cenários</h2>
+                  <h2 class="texto-pixelado2 m-0" data-i18n="cenarios_title">Cenários</h2>
                 </div>
                 <div class="bg-dark mx-auto mt-2 w-100 rounded-bottom" style="height: 350px;">
                   <div id="carouselCenarios" class="carousel slide h-100 d-flex align-items-center">
                     <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="Cenario1v2-gaveta1fechada.jpg" class="d-block w-100 rounded" style="max-height: 330px; object-fit: contain;" alt="Cenario 1">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="cenario2v2.jpg" class="d-block w-100 rounded" style="max-height: 330px; object-fit: contain;" alt="Cenario 2">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="cenario3v2.jpg" class="d-block w-100 rounded" style="max-height: 330px; object-fit: contain;" alt="Cenario 3">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="CENARIO4.jpg" class="d-block w-100 rounded" style="max-height: 330px; object-fit: contain;" alt="Cenario 4">
-                      </div>
+                      <div class="carousel-item active"><img src="Cenario1v2-gaveta1fechada.jpg" class="d-block w-100 rounded" style="max-height: 330px; object-fit: contain;"></div>
+                      <div class="carousel-item"><img src="cenario2v2.jpg" class="d-block w-100 rounded" style="max-height: 330px; object-fit: contain;"></div>
+                      <div class="carousel-item"><img src="cenario3v2.jpg" class="d-block w-100 rounded" style="max-height: 330px; object-fit: contain;"></div>
+                      <div class="carousel-item"><img src="CENARIO4.jpg" class="d-block w-100 rounded" style="max-height: 330px; object-fit: contain;"></div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselCenarios" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Anterior</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselCenarios" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Próximo</span>
-                    </button>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselCenarios" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselCenarios" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
                   </div>
                 </div>
               </div>
@@ -195,52 +172,40 @@
           </div>
         </div>
 
-        <div class="tab-pane fade" id="pills-storyboard" role="tabpanel" aria-labelledby="pills-storyboard-tab" tabindex="0">
+        <div class="tab-pane fade" id="pills-storyboard" role="tabpanel" tabindex="0">
           <div class="bg-verde-container p-3 p-md-4 rounded">
             <div class="card-bg-custom p-3 text-center rounded">
               <div class="retangulos mb-2">
-                <h2 class="texto-pixelado2 m-0">Storyboards</h2>
+                <h2 class="texto-pixelado2 m-0" data-i18n="storyboard_title">Storyboards</h2>
               </div>
               <div class="bg-dark mx-auto w-100 p-3 rounded" style="min-height: 500px;">
                 <div id="carouselStoryboards" class="carousel slide h-100 d-flex align-items-center">
                   <div class="carousel-inner">
-                    <div class="carousel-item active text-center">
-                      <img src="stb1.png" class="d-block mx-auto rounded img-fluid" style="max-height: 550px; object-fit: contain;" alt="Storyboard 1">
-                    </div>
-                    <div class="carousel-item text-center">
-                      <img src="stb2.png" class="d-block mx-auto rounded img-fluid" style="max-height: 550px; object-fit: contain;" alt="Storyboard 2">
-                    </div>
-                    <div class="carousel-item text-center">
-                      <img src="stb3.png" class="d-block mx-auto rounded img-fluid" style="max-height: 550px; object-fit: contain;" alt="Storyboard 3">
-                    </div>
+                    <div class="carousel-item active text-center"><img src="stb1.png" class="d-block mx-auto rounded img-fluid" style="max-height: 550px; object-fit: contain;"></div>
+                    <div class="carousel-item text-center"><img src="stb2.png" class="d-block mx-auto rounded img-fluid" style="max-height: 550px; object-fit: contain;"></div>
+                    <div class="carousel-item text-center"><img src="stb3.png" class="d-block mx-auto rounded img-fluid" style="max-height: 550px; object-fit: contain;"></div>
                   </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselStoryboards" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselStoryboards" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Próximo</span>
-                  </button>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselStoryboards" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselStoryboards" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="tab-pane fade" id="pills-docs" role="tabpanel" aria-labelledby="pills-docs-tab" tabindex="0">
+        <div class="tab-pane fade" id="pills-docs" role="tabpanel" tabindex="0">
           <div class="row g-4 bg-verde-container p-3 p-md-4 rounded">
             <div class="col-12 col-md-6">
               <div class="card-bg-custom p-3 text-center rounded h-100">
                 <div class="retangulos">
-                  <h2 class="texto-pixelado2 m-0">Documentação & GitHub</h2>
+                  <h2 class="texto-pixelado2 m-0" data-i18n="docs_title">Documentação & GitHub</h2>
                 </div>
                 <div class="bg-dark mx-auto mt-2 w-100 p-4 rounded-bottom d-flex flex-column align-items-center justify-content-center gap-3" style="min-height: 300px;">
-                  <a href="Documentação.pdf" download="Documentação.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light texto-pixelado3 px-4 py-2">
+                  <a href="Documentação.pdf" download="Documentação.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light texto-pixelado3 px-4 py-2" data-i18n="btn_docs">
                     📄 Baixar Documentação (PDF)
                   </a>
                   <a href="https://github.com/alonsohaytsmann-ai/ECOTIME/tree/main" target="_blank" rel="noopener noreferrer" class="mt-2">
-                    <img src="logotipo-do-github.png" style="height: 60px;" alt="GitHub">
+                    <img src="logotipo-do-github.png" style="height: 60px;">
                   </a>
                 </div>
               </div>
@@ -249,7 +214,7 @@
             <div class="col-12 col-md-6">
               <div class="card-bg-custom p-3 text-center rounded h-100 d-flex flex-column justify-content-center">
                 <div class="retangulos mb-3">
-                  <h3 class="texto-pixelado2 fs-4 m-0">Agradecimentos Especiais</h3>
+                  <h3 class="texto-pixelado2 fs-4 m-0" data-i18n="thanks_title">Agradecimentos Especiais</h3>
                 </div>
                 <div class="bg-dark p-3 rounded">
                   <p class="texto-pixelado3 m-0 text-center">Cláudia Miyuki</p>
@@ -265,6 +230,66 @@
       </div>
 
     </main>
+
+    <script>
+      const traducoes = {
+        pt: {
+          tab_geral: "Geral / Equipe",
+          tab_gameplay: "Gameplay & Cenários",
+          tab_storyboard: "Storyboard",
+          tab_docs: "Documentação & GitHub",
+          equipe_title: "Equipe",
+          sinopse_title: "Sinopse",
+          sinopse_text: "Sua mãe sai e deixa uma lista de tarefas ecológicas para realizar, e você como um bom filho deve terminá-las antes que ela chegue!",
+          gameplay_title: "Gameplay",
+          cenarios_title: "Cenários",
+          storyboard_title: "Storyboards",
+          docs_title: "Documentação & GitHub",
+          btn_docs: "📄 Baixar Documentação (PDF)",
+          thanks_title: "Agradecimentos Especiais"
+        },
+        en: {
+          tab_geral: "General / Team",
+          tab_gameplay: "Gameplay & Scenarios",
+          tab_storyboard: "Storyboard",
+          tab_docs: "Documentation & GitHub",
+          equipe_title: "Team",
+          sinopse_title: "Synopsis",
+          sinopse_text: "Your mom leaves you a list of ecological chores to do, and as a good child, you must finish them before she gets back!",
+          gameplay_title: "Gameplay",
+          cenarios_title: "Scenarios",
+          storyboard_title: "Storyboards",
+          docs_title: "Documentation & GitHub",
+          btn_docs: "📄 Download Documentation (PDF)",
+          thanks_title: "Special Thanks"
+        },
+        es: {
+          tab_geral: "General / Equipo",
+          tab_gameplay: "Gameplay y Escenarios",
+          tab_storyboard: "Storyboard",
+          tab_docs: "Documentación y GitHub",
+          equipe_title: "Equipo",
+          sinopse_title: "Sinopsis",
+          sinopse_text: "¡Tu madre sale y te deja una lista de tareas ecológicas por hacer, y tú como un buen hijo debes terminarlas antes de que ella llegue!",
+          gameplay_title: "Gameplay",
+          cenarios_title: "Escenarios",
+          storyboard_title: "Storyboards",
+          docs_title: "Documentación y GitHub",
+          btn_docs: "📄 Descargar Documentación (PDF)",
+          thanks_title: "Agradecimientos Especiales"
+        }
+      };
+
+      function mudarIdioma(lang) {
+        const elementos = document.querySelectorAll('[data-i18n]');
+        elementos.forEach(el => {
+          const chave = el.getAttribute('data-i18n');
+          if (traducoes[lang] && traducoes[lang][chave]) {
+            el.innerText = traducoes[lang][chave];
+          }
+        });
+      }
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
