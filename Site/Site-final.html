@@ -102,6 +102,9 @@
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="pills-docs-tab" data-bs-toggle="pill" data-bs-target="#pills-docs" type="button" role="tab" data-i18n="tab_docs">Documentação & GitHub</button>
         </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-codigo-tab" data-bs-toggle="pill" data-bs-target="#pills-codigo" type="button" role="tab" data-i18n="tab_codigo">Código</button>
+        </li>
       </ul>
 
       <div class="tab-content" id="pills-tabContent">
@@ -227,6 +230,41 @@
           </div>
         </div>
 
+        <div class="tab-pane fade" id="pills-codigo" role="tabpanel" tabindex="0">
+          <div class="bg-verde-container p-3 p-md-4 rounded">
+            <div class="card-bg-custom p-3 text-center rounded">
+              <div class="retangulos mb-2">
+                <h2 class="texto-pixelado2 m-0" data-i18n="codigo_title">Código do Projeto</h2>
+              </div>
+              <div class="bg-dark mx-auto w-100 p-3 rounded">
+                <p class="texto-pixelado3 mb-3" data-i18n="codigo_desc">Confira imagens de trechos do código desenvolvido pela equipe.</p>
+                <div id="carouselCodigo" class="carousel slide" data-bs-ride="false">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active text-center">
+                      <img src="cod1.jpeg" class="d-block mx-auto rounded img-fluid" style="max-height: 550px; object-fit: contain;" alt="Trecho 1 do código">
+                      <p class="texto-pixelado3 mt-2 mb-0">Código 1</p>
+                    </div>
+                    <div class="carousel-item text-center">
+                      <img src="cod2.jpeg" class="d-block mx-auto rounded img-fluid" style="max-height: 550px; object-fit: contain;" alt="Trecho 2 do código">
+                      <p class="texto-pixelado3 mt-2 mb-0">Código 2</p>
+                    </div>
+                    <div class="carousel-item text-center">
+                      <img src="cod3.jpeg" class="d-block mx-auto rounded img-fluid" style="max-height: 550px; object-fit: contain;" alt="Trecho 3 do código">
+                      <p class="texto-pixelado3 mt-2 mb-0">Código 3</p>
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselCodigo" data-bs-slide="prev" aria-label="Anterior">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselCodigo" data-bs-slide="next" aria-label="Próximo">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </main>
@@ -238,6 +276,9 @@
           tab_gameplay: "Gameplay & Cenários",
           tab_storyboard: "Storyboard",
           tab_docs: "Documentação & GitHub",
+          tab_codigo: "Código",
+          codigo_title: "Código do Projeto",
+          codigo_desc: "Confira imagens de trechos do código desenvolvido pela equipe.",
           equipe_title: "Equipe",
           sinopse_title: "Sinopse",
           sinopse_text: "Sua mãe sai e deixa uma lista de tarefas ecológicas para realizar, e você como um bom filho deve terminá-las antes que ela chegue!",
@@ -253,6 +294,9 @@
           tab_gameplay: "Gameplay & Scenarios",
           tab_storyboard: "Storyboard",
           tab_docs: "Documentation & GitHub",
+          tab_codigo: "Code",
+          codigo_title: "Project Code",
+          codigo_desc: "Browse images of code snippets developed by the team.",
           equipe_title: "Team",
           sinopse_title: "Synopsis",
           sinopse_text: "Your mom leaves you a list of ecological chores to do, and as a good child, you must finish them before she gets back!",
@@ -268,6 +312,9 @@
           tab_gameplay: "Gameplay y Escenarios",
           tab_storyboard: "Storyboard",
           tab_docs: "Documentación y GitHub",
+          tab_codigo: "Código",
+          codigo_title: "Código del proyecto",
+          codigo_desc: "Mira imágenes de fragmentos del código desarrollado por el equipo.",
           equipe_title: "Equipo",
           sinopse_title: "Sinopsis",
           sinopse_text: "¡Tu madre sale y te deja una lista de tareas ecológicas por hacer, y tú como un buen hijo debes terminarlas antes de que ella llegue!",
