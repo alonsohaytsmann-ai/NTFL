@@ -7,14 +7,24 @@
 [ext_resource type="Script" uid="uid://dvqfbuoxny2w0" path="res://Scripts/button.gd" id="4_60s2y"]
 [ext_resource type="Texture2D" uid="uid://dyod3lj13off4" path="res://Sprites/imagens desligar pc/botao-bem2.png" id="4_xfncy"]
 [ext_resource type="Texture2D" uid="uid://co8vr0b821jpu" path="res://Sprites/imagens desligar pc/bloco-minigame1.png" id="5_60s2y"]
+[ext_resource type="Texture2D" uid="uid://b2bx7hoep6cvu" path="res://Sprites/imagens desligar pc/botao-bem1.png" id="6_wwxnx"]
 [ext_resource type="FontFile" uid="uid://d32tsijie0urt" path="res://Fonte/PressStart2P-Regular.ttf" id="8_tyq8e"]
-[ext_resource type="PackedScene" uid="uid://ds4ihapjbp64s" path="res://Cenarios/timer.tscn" id="10_bl4rq"]
+[ext_resource type="Script" uid="uid://0yjp8byagqol" path="res://Scripts/timer.gd" id="9_32shg"]
+[ext_resource type="Texture2D" uid="uid://ci5pl4ak2bes4" path="res://Sprites/imagens menu perder/menu-perder.png" id="10_wwxnx"]
+[ext_resource type="Texture2D" uid="uid://damkjpnas6fww" path="res://Sprites/lista global/Lista-principal.png" id="11_l2ev7"]
+[ext_resource type="Texture2D" uid="uid://bpc8448m1vy3k" path="res://Sprites/imagens menu dificuldade/confere-lista6.png" id="12_5nyhs"]
+[ext_resource type="Texture2D" uid="uid://duhm30nuycrw1" path="res://Sprites/Inventario/inventario.png" id="13_pb335"]
+[ext_resource type="Texture2D" uid="uid://cgyq6vrrrynb7" path="res://Sprites/lista global/Pausar.png" id="14_l2ev7"]
+[ext_resource type="Texture2D" uid="uid://dikwypeci52en" path="res://Sprites/Inventario/inventario-para-item.png" id="14_oyu6m"]
+[ext_resource type="Texture2D" uid="uid://isd1oqa85rhm" path="res://Sprites/imagens cenario 2/chave-saida.png" id="15_fiflj"]
+[ext_resource type="Texture2D" uid="uid://7n5oukn1ic4s" path="res://Sprites/imagens cenario 2/Chave-de-fenda.png" id="16_vk2x7"]
+[ext_resource type="Texture2D" uid="uid://2ca63uysvnbk" path="res://Sprites/Vitoria/Victory.png" id="19_5nyhs"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_r7rci"]
 load_path = "res://.godot/imported/botao-mau2.png-0c48d520fda59a230283d41c2e5d2190.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ktnyr"]
-load_path = "res://.godot/imported/botao-bem1.png-8508d5cb5bca5e59ded15b8f76a9d255.ctex"
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o6fnk"]
+bg_color = Color(0.2784314, 0.2784314, 0.2784314, 0.7294118)
 
 [node name="Control" type="Control" unique_id=2004180478]
 propagate_maximum_size = true
@@ -27,7 +37,7 @@ grow_vertical = 2
 script = ExtResource("1_r7rci")
 
 [node name="Sprite2D" type="TextureRect" parent="." unique_id=415196383]
-modulate = Color(0.42357814, 0.42357814, 0.42357814, 0.76862746)
+modulate = Color(0.42352942, 0.42352942, 0.42352942, 0.76862746)
 propagate_maximum_size = true
 layout_mode = 1
 anchors_preset = 15
@@ -44,15 +54,15 @@ expand_mode = 1
 
 [node name="Sprite2D2" type="TextureRect" parent="." unique_id=646998416]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -454.0
-offset_top = -245.0
-offset_right = 454.0
-offset_bottom = 256.0
+anchors_preset = -1
+anchor_left = 0.38900003
+anchor_top = 0.30200002
+anchor_right = 0.611
+anchor_bottom = 0.698
+offset_left = -333.12802
+offset_top = -128.69601
+offset_right = 353.128
+offset_bottom = 131.69598
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_60s2y")
@@ -77,7 +87,7 @@ offset_top = 377.0
 offset_right = 604.0
 offset_bottom = 455.0
 button_mask = 7
-texture_normal = SubResource("CompressedTexture2D_ktnyr")
+texture_normal = ExtResource("6_wwxnx")
 texture_pressed = ExtResource("4_xfncy")
 stretch_mode = 0
 script = ExtResource("4_60s2y")
@@ -97,7 +107,19 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("8_tyq8e")
 text = "VOCE GANHOU"
-metadata/_edit_lock_ = true
+
+[node name="Sair se ganhou" type="Button" parent="Label2" unique_id=1261777652]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -36.0
+offset_top = 61.0
+offset_right = 36.0
+offset_bottom = 85.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("8_tyq8e")
+text = "SAIR"
 
 [node name="Label" type="Label" parent="." unique_id=979628975]
 visible = false
@@ -117,43 +139,341 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_lock_ = true
 
-[node name="Tentar de novo" type="Button" parent="." unique_id=1007196359]
-visible = false
+[node name="Tentar de novo" type="Button" parent="Label" unique_id=1007196359]
 layout_mode = 0
-offset_left = 275.0
-offset_top = 175.0
-offset_right = 507.0
-offset_bottom = 249.0
+offset_left = -213.0
+offset_top = 57.0
+offset_right = 19.0
+offset_bottom = 131.0
 theme_override_fonts/font = ExtResource("8_tyq8e")
 text = "TENTAR DE NOVO"
 
-[node name="Sair se perdeu" type="Button" parent="." unique_id=82868559]
-visible = false
+[node name="Sair se perdeu" type="Button" parent="Label" unique_id=82868559]
 layout_mode = 0
-offset_left = 686.0
-offset_top = 173.0
-offset_right = 832.0
-offset_bottom = 247.0
+offset_left = 198.0
+offset_top = 55.0
+offset_right = 344.0
+offset_bottom = 129.0
 theme_override_fonts/font = ExtResource("8_tyq8e")
 text = "SAIR"
 
-[node name="Sair se ganhou" type="Button" parent="." unique_id=1261777652]
+[node name="CanvasLayer" type="Control" parent="." unique_id=300292328]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("9_32shg")
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=1880786632]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_o6fnk")
+
+[node name="Fim de jogo" type="TextureRect" parent="CanvasLayer" unique_id=2036094270]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_wwxnx")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=162250119]
+position = Vector2(130, 27.75)
+scale = Vector2(0.9140625, 0.13867189)
+texture = ExtResource("5_60s2y")
+
+[node name="Tempo" type="Label" parent="CanvasLayer" unique_id=750068938]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 17.0
+offset_right = 300.0
+offset_bottom = 138.0
+theme_override_fonts/font = ExtResource("8_tyq8e")
+theme_override_font_sizes/font_size = 20
+
+[node name="Pausado" type="Label" parent="CanvasLayer" unique_id=1732462089]
 visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -36.0
-offset_top = 179.0
-offset_right = 36.0
-offset_bottom = 203.0
+offset_left = -154.0
+offset_top = 101.0
+offset_right = 154.0
+offset_bottom = 145.0
 grow_horizontal = 2
+size_flags_horizontal = 6
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("8_tyq8e")
-text = "SAIR"
+theme_override_font_sizes/font_size = 44
+text = "Pausado"
 
-[node name="CanvasLayer" parent="." unique_id=1771017111 instance=ExtResource("10_bl4rq")]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=29137410]
+visible = false
 layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -229.0
+offset_top = -58.0
+offset_right = 229.0
+offset_bottom = 58.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
 
-[connection signal="pressed" from="Tentar de novo" to="." method="_on_tentar_de_novo_pressed"]
-[connection signal="pressed" from="Sair se perdeu" to="." method="_on_sair_se_perdeu_pressed"]
-[connection signal="pressed" from="Sair se ganhou" to="." method="_on_sair_se_ganhou_pressed"]
+[node name="Botao despausar" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=34449311]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("8_tyq8e")
+theme_override_font_sizes/font_size = 25
+text = "DESPAUSAR"
+
+[node name="Botao voltar para o menu pausa" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=591342029]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("8_tyq8e")
+theme_override_font_sizes/font_size = 25
+text = "VOLTAR PARA O MENU"
+
+[node name="Botao Lista" type="TextureButton" parent="CanvasLayer" unique_id=200428986]
+layout_mode = 0
+offset_left = 1048.0
+offset_right = 1151.0
+offset_bottom = 120.0
+texture_normal = ExtResource("11_l2ev7")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="Papelzao" type="TextureRect" parent="CanvasLayer" unique_id=1678903716]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_l2ev7")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="CanvasLayer/Papelzao" unique_id=276116881]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -248.0
+offset_top = -261.0
+offset_right = 238.0
+offset_bottom = -174.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_tyq8e")
+theme_override_font_sizes/font_size = 29
+text = "LISTA DE TAREFAS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/Papelzao" unique_id=116891987]
+layout_mode = 0
+offset_left = 338.0
+offset_top = 228.0
+offset_right = 779.0
+offset_bottom = 513.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_tyq8e")
+theme_override_font_sizes/font_size = 21
+text = "Desligar Computador
+---------------------
+Lista de compras
+---------------------
+Jogar o lixo fora
+---------------------
+Arrumar o Notebook"
+vertical_alignment = 3
+
+[node name="Check 1" type="TextureRect" parent="CanvasLayer/Papelzao" unique_id=164409130]
+visible = false
+layout_mode = 0
+offset_left = 736.0
+offset_top = 219.0
+offset_right = 776.0
+offset_bottom = 259.0
+texture = ExtResource("12_5nyhs")
+
+[node name="Check 2" type="TextureRect" parent="CanvasLayer/Papelzao" unique_id=1963114978]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.035
+anchor_bottom = 0.062000003
+offset_left = 679.0
+offset_top = 307.0
+offset_right = 678.68
+offset_bottom = 306.824
+texture = ExtResource("12_5nyhs")
+
+[node name="Check 3" type="TextureRect" parent="CanvasLayer/Papelzao" unique_id=1010288845]
+visible = false
+layout_mode = 0
+offset_left = 702.0
+offset_top = 400.0
+offset_right = 742.0
+offset_bottom = 440.0
+texture = ExtResource("12_5nyhs")
+
+[node name="Check 4" type="TextureRect" parent="CanvasLayer/Papelzao" unique_id=947283130]
+visible = false
+layout_mode = 0
+offset_left = 720.0
+offset_top = 480.0
+offset_right = 760.0
+offset_bottom = 520.0
+texture = ExtResource("12_5nyhs")
+
+[node name="Voltar" type="Button" parent="CanvasLayer/Papelzao" unique_id=1357022476]
+layout_mode = 0
+offset_left = 362.0
+offset_top = 573.0
+offset_right = 466.0
+offset_bottom = 597.0
+theme_override_colors/font_color = Color(1, 0.17254902, 0.17254902, 1)
+theme_override_fonts/font = ExtResource("8_tyq8e")
+text = "VOLTAR"
+flat = true
+icon_alignment = 1
+
+[node name="Botao voltar para o menu perdeu" type="Button" parent="CanvasLayer" unique_id=647521534]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("8_tyq8e")
+theme_override_font_sizes/font_size = 25
+flat = true
+
+[node name="Pausar" type="Button" parent="CanvasLayer" unique_id=1261672203]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -31.0
+offset_top = -21.0
+offset_right = 9.0
+offset_bottom = 19.0
+grow_horizontal = 2
+scale = Vector2(2, 2)
+icon = ExtResource("14_l2ev7")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="inventario" type="TextureRect" parent="CanvasLayer" unique_id=2029730666]
+visible = false
+propagate_maximum_size = true
+clip_contents = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -262.0
+offset_top = -215.0
+offset_right = -15.0
+offset_bottom = -79.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(2, 2)
+offset_transform_enabled = true
+offset_transform_position = Vector2(-20, 0)
+offset_transform_visual_only = false
+texture = ExtResource("13_pb335")
+
+[node name="caixinha1" type="TextureRect" parent="CanvasLayer/inventario" unique_id=438053855]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4959514
+anchor_top = 0.9742647
+anchor_right = 0.4959514
+anchor_bottom = 0.9742647
+offset_left = -1.0
+offset_top = -89.5
+offset_right = 31.0
+offset_bottom = -57.5
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("14_oyu6m")
+metadata/_edit_use_anchors_ = true
+
+[node name="Chave 1" type="TextureRect" parent="CanvasLayer/inventario" unique_id=1944358520]
+visible = false
+layout_mode = 0
+offset_left = 130.5
+offset_top = 51.5
+offset_right = 168.0
+offset_bottom = 89.0
+texture = ExtResource("15_fiflj")
+
+[node name="Chave philips 1" type="TextureRect" parent="CanvasLayer/inventario" unique_id=291344291]
+visible = false
+layout_mode = 0
+offset_left = 130.5
+offset_top = 51.5
+offset_right = 168.0
+offset_bottom = 89.0
+texture = ExtResource("16_vk2x7")
+
+[node name="Vitoria" type="TextureRect" parent="CanvasLayer" unique_id=1467347796]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("19_5nyhs")
+
+[node name="pontos" type="Label" parent="CanvasLayer/Vitoria" unique_id=425545707]
+visible = false
+layout_mode = 0
+offset_left = 706.0
+offset_top = 455.0
+offset_right = 1008.0
+offset_bottom = 512.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_tyq8e")
+theme_override_font_sizes/font_size = 40
+vertical_alignment = 1
+
+[connection signal="pressed" from="Label2/Sair se ganhou" to="." method="_on_sair_se_ganhou_pressed"]
+[connection signal="pressed" from="Label/Tentar de novo" to="." method="_on_tentar_de_novo_pressed"]
+[connection signal="pressed" from="Label/Sair se perdeu" to="." method="_on_sair_se_perdeu_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Botao despausar" to="CanvasLayer" method="_on_botao_despausar_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Botao voltar para o menu pausa" to="CanvasLayer" method="_on_botao_voltar_para_o_menu_pausa_pressed"]
+[connection signal="pressed" from="CanvasLayer/Botao Lista" to="CanvasLayer" method="_on_botao_lista_pressed"]
+[connection signal="pressed" from="CanvasLayer/Papelzao/Voltar" to="CanvasLayer" method="_on_voltar_pressed"]
+[connection signal="pressed" from="CanvasLayer/Papelzao/Voltar" to="CanvasLayer" method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Botao voltar para o menu perdeu" to="CanvasLayer" method="_on_botao_voltar_para_o_menu_perdeu_pressed"]
+[connection signal="pressed" from="CanvasLayer/Pausar" to="CanvasLayer" method="_on_pausar_pressed"]

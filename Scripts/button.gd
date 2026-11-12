@@ -3,16 +3,13 @@ extends TextureButton
 var clicks: int = 0
 var fim: bool = false
 var move_timer: Timer
-var menu
 
 func _ready() -> void:
 	add_to_group("botoes")
 	pressed.connect(_botao_pressionado)
 	
 	move_timer = Timer.new()
-	
 	move_timer.wait_time = Global.velocidade_botao()
-	
 	move_timer.one_shot = true
 	move_timer.timeout.connect(_mover_botao)
 	add_child(move_timer)
@@ -33,7 +30,6 @@ func _mover_botao() -> void:
 		randf_range(min_y, max_y)
 	)
 	
-	
 	move_timer.start()
 
 func _botao_pressionado() -> void:
@@ -50,8 +46,6 @@ func _botao_pressionado() -> void:
 func _vencedor() -> void:
 	fim = true
 	move_timer.stop()
-	
 	get_tree().call_group("botoes", "set_disabled", true)
 	$"../Label2".visible = true
-	$"../Sair se ganhou".visible = true
 	Global.minigamePc_vencido = true

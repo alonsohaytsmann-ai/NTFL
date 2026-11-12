@@ -9,9 +9,7 @@ func _ready() -> void:
 	pressed.connect(_botao_pressionado)
 	
 	move_timer = Timer.new()
-	
 	move_timer.wait_time = Global.velocidade_botao()
-	
 	move_timer.one_shot = true
 	move_timer.timeout.connect(_mover_botao)
 	add_child(move_timer)
@@ -48,8 +46,6 @@ func _botao_pressionado() -> void:
 func _perdedor() -> void:
 	fim = true
 	move_timer.stop()
-	
 	get_tree().call_group("botoes", "set_disabled", true)
 	$"../Label".visible = true
-	$"../Sair se perdeu".visible = true
-	$"../Tentar de novo".visible = true
+	

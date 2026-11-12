@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://vioio0qviw10" path="res://Sprites/imagens menu dificuldade/confere-lista4.png" id="11_cdygl"]
 [ext_resource type="Texture2D" uid="uid://c0o0u0e5rwpcy" path="res://Sprites/imagens menu dificuldade/confere-lista5.png" id="12_nd6l4"]
 [ext_resource type="Texture2D" uid="uid://bpc8448m1vy3k" path="res://Sprites/imagens menu dificuldade/confere-lista6.png" id="13_xotr2"]
+[ext_resource type="Texture2D" uid="uid://bnuhderb80tqn" path="res://Sprites/Menu-Tutorial/Tutorial letras.png" id="16_pci2s"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0o2xg"]
 animations = [{
@@ -280,6 +281,22 @@ position = Vector2(733, 481.00003)
 scale = Vector2(1.5937485, 1.7500012)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 
+[node name="Tutorial" type="Button" parent="." unique_id=1259544260]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -185.0
+offset_top = 531.0
+offset_right = -96.5
+offset_bottom = 573.0
+grow_horizontal = 2
+scale = Vector2(2, 2)
+icon = ExtResource("16_pci2s")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
 [connection signal="pressed" from="Voltar" to="." method="_on_voltar_pressed"]
 [connection signal="pressed" from="facil" to="." method="_on_facil_pressed"]
 [connection signal="pressed" from="medio" to="." method="_on_medio_pressed"]
@@ -289,3 +306,4 @@ sprite_frames = SubResource("SpriteFrames_g4v7s")
 [connection signal="animation_finished" from="animacao medio" to="." method="_on_animacao_medio_animation_finished"]
 [connection signal="animation_finished" from="animacao dificil" to="." method="_on_animacao_dificil_animation_finished"]
 [connection signal="animation_finished" from="animacao impossivel" to="." method="_on_animacao_impossivel_animation_finished"]
+[connection signal="pressed" from="Tutorial" to="." method="_on_tutorial_pressed"]

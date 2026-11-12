@@ -1,8 +1,24 @@
 [gd_scene format=3 uid="uid://b1w8s65qje8ji"]
 
 [ext_resource type="Script" uid="uid://bw3gnyj02knxt" path="res://Scripts/node_2d.gd" id="1_gsiby"]
-[ext_resource type="Texture2D" uid="uid://m0qoef0cohh1" path="res://Sprites/imagens cenario 3/cenario3.png" id="2_nhml7"]
-[ext_resource type="PackedScene" uid="uid://ds4ihapjbp64s" path="res://Cenarios/timer.tscn" id="3_nhml7"]
+[ext_resource type="Texture2D" uid="uid://bv8rgw0qrq02f" path="res://Sprites/imagens cenario 3/cenario3v2.jpg" id="2_hwkr7"]
+[ext_resource type="Texture2D" uid="uid://bf21i81e0u5ef" path="res://Sprites/imagens cenario 3/Voltar-botão.png" id="3_qccy2"]
+[ext_resource type="Texture2D" uid="uid://b1mv8sbexyip6" path="res://Sprites/imagens cenario 3/Voltar-botão2.png" id="4_mi23p"]
+[ext_resource type="Script" uid="uid://0yjp8byagqol" path="res://Scripts/timer.gd" id="5_vkowx"]
+[ext_resource type="Texture2D" uid="uid://ci5pl4ak2bes4" path="res://Sprites/imagens menu perder/menu-perder.png" id="6_3frwa"]
+[ext_resource type="Texture2D" uid="uid://co8vr0b821jpu" path="res://Sprites/imagens desligar pc/bloco-minigame1.png" id="7_xa0pb"]
+[ext_resource type="FontFile" uid="uid://d32tsijie0urt" path="res://Fonte/PressStart2P-Regular.ttf" id="8_52psa"]
+[ext_resource type="Texture2D" uid="uid://damkjpnas6fww" path="res://Sprites/lista global/Lista-principal.png" id="9_qa4lr"]
+[ext_resource type="Texture2D" uid="uid://bpc8448m1vy3k" path="res://Sprites/imagens menu dificuldade/confere-lista6.png" id="10_dynke"]
+[ext_resource type="Texture2D" uid="uid://cgyq6vrrrynb7" path="res://Sprites/lista global/Pausar.png" id="11_4lxdi"]
+[ext_resource type="Texture2D" uid="uid://duhm30nuycrw1" path="res://Sprites/Inventario/inventario.png" id="12_r0ss3"]
+[ext_resource type="Texture2D" uid="uid://dikwypeci52en" path="res://Sprites/Inventario/inventario-para-item.png" id="13_pumot"]
+[ext_resource type="Texture2D" uid="uid://isd1oqa85rhm" path="res://Sprites/imagens cenario 2/chave-saida.png" id="14_qni7f"]
+[ext_resource type="Texture2D" uid="uid://7n5oukn1ic4s" path="res://Sprites/imagens cenario 2/Chave-de-fenda.png" id="15_5i8ok"]
+[ext_resource type="Texture2D" uid="uid://2ca63uysvnbk" path="res://Sprites/Vitoria/Victory.png" id="16_c2jh7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o6fnk"]
+bg_color = Color(0.2784314, 0.2784314, 0.2784314, 0.7294118)
 
 [node name="Node2D" type="Control" unique_id=1691047272]
 layout_mode = 3
@@ -23,26 +39,346 @@ offset_bottom = 1832.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.25065273, 0.26129034)
-texture = ExtResource("2_nhml7")
+texture = ExtResource("2_hwkr7")
 expand_mode = 2
 
-[node name="Button" type="Button" parent="." unique_id=2022047377]
+[node name="Button" type="TextureButton" parent="." unique_id=2129437220]
 layout_mode = 0
-offset_left = 600.0
-offset_top = -1.0
-offset_right = 1051.0
-offset_bottom = 366.0
-flat = true
-
-[node name="CanvasLayer" parent="." unique_id=1771017111 instance=ExtResource("3_nhml7")]
-layout_mode = 1
+offset_left = 43.0
+offset_top = 560.0
+offset_right = 75.0
+offset_bottom = 582.25
+scale = Vector2(4, 4)
+texture_normal = ExtResource("3_qccy2")
+texture_pressed = ExtResource("4_mi23p")
+ignore_texture_size = true
+stretch_mode = 3
 
 [node name="Button2" type="Button" parent="." unique_id=1327242016]
 layout_mode = 0
-offset_left = 323.0
-offset_top = 272.0
-offset_right = 403.0
-offset_bottom = 352.0
+offset_left = 409.0
+offset_top = 294.0
+offset_right = 455.0
+offset_bottom = 351.0
+flat = true
+
+[node name="CanvasLayer" type="Control" parent="." unique_id=1771017111]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("5_vkowx")
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=1880786632]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_o6fnk")
+
+[node name="Fim de jogo" type="TextureRect" parent="CanvasLayer" unique_id=2036094270]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_3frwa")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=162250119]
+position = Vector2(130, 27.75)
+scale = Vector2(0.9140625, 0.13867189)
+texture = ExtResource("7_xa0pb")
+
+[node name="Tempo" type="Label" parent="CanvasLayer" unique_id=750068938]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 17.0
+offset_right = 300.0
+offset_bottom = 138.0
+theme_override_fonts/font = ExtResource("8_52psa")
+theme_override_font_sizes/font_size = 20
+
+[node name="Pausado" type="Label" parent="CanvasLayer" unique_id=1732462089]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -154.0
+offset_top = 101.0
+offset_right = 154.0
+offset_bottom = 145.0
+grow_horizontal = 2
+size_flags_horizontal = 6
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("8_52psa")
+theme_override_font_sizes/font_size = 44
+text = "Pausado"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=29137410]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -229.0
+offset_top = -58.0
+offset_right = 229.0
+offset_bottom = 58.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="Botao despausar" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=34449311]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("8_52psa")
+theme_override_font_sizes/font_size = 25
+text = "DESPAUSAR"
+
+[node name="Botao voltar para o menu pausa" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=591342029]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("8_52psa")
+theme_override_font_sizes/font_size = 25
+text = "VOLTAR PARA O MENU"
+
+[node name="Botao Lista" type="TextureButton" parent="CanvasLayer" unique_id=200428986]
+layout_mode = 0
+offset_left = 1048.0
+offset_right = 1151.0
+offset_bottom = 120.0
+texture_normal = ExtResource("9_qa4lr")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="Papelzao" type="TextureRect" parent="CanvasLayer" unique_id=1678903716]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_qa4lr")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="CanvasLayer/Papelzao" unique_id=276116881]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -248.0
+offset_top = -261.0
+offset_right = 238.0
+offset_bottom = -174.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_52psa")
+theme_override_font_sizes/font_size = 29
+text = "LISTA DE TAREFAS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/Papelzao" unique_id=116891987]
+layout_mode = 0
+offset_left = 338.0
+offset_top = 228.0
+offset_right = 779.0
+offset_bottom = 513.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_52psa")
+theme_override_font_sizes/font_size = 21
+text = "Desligar Computador
+---------------------
+Lista de compras
+---------------------
+Jogar o lixo fora
+---------------------
+Arrumar o Notebook"
+vertical_alignment = 3
+
+[node name="Check 1" type="TextureRect" parent="CanvasLayer/Papelzao" unique_id=164409130]
+visible = false
+layout_mode = 0
+offset_left = 736.0
+offset_top = 219.0
+offset_right = 776.0
+offset_bottom = 259.0
+texture = ExtResource("10_dynke")
+
+[node name="Check 2" type="TextureRect" parent="CanvasLayer/Papelzao" unique_id=1963114978]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.035
+anchor_bottom = 0.062000003
+offset_left = 679.0
+offset_top = 307.0
+offset_right = 678.68
+offset_bottom = 306.824
+texture = ExtResource("10_dynke")
+
+[node name="Check 3" type="TextureRect" parent="CanvasLayer/Papelzao" unique_id=1010288845]
+visible = false
+layout_mode = 0
+offset_left = 702.0
+offset_top = 400.0
+offset_right = 742.0
+offset_bottom = 440.0
+texture = ExtResource("10_dynke")
+
+[node name="Check 4" type="TextureRect" parent="CanvasLayer/Papelzao" unique_id=947283130]
+visible = false
+layout_mode = 0
+offset_left = 720.0
+offset_top = 480.0
+offset_right = 760.0
+offset_bottom = 520.0
+texture = ExtResource("10_dynke")
+
+[node name="Voltar" type="Button" parent="CanvasLayer/Papelzao" unique_id=1357022476]
+layout_mode = 0
+offset_left = 362.0
+offset_top = 573.0
+offset_right = 466.0
+offset_bottom = 597.0
+theme_override_colors/font_color = Color(1, 0.17254902, 0.17254902, 1)
+theme_override_fonts/font = ExtResource("8_52psa")
+text = "VOLTAR"
+flat = true
+icon_alignment = 1
+
+[node name="Botao voltar para o menu perdeu" type="Button" parent="CanvasLayer" unique_id=647521534]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("8_52psa")
+theme_override_font_sizes/font_size = 25
+flat = true
+
+[node name="Pausar" type="Button" parent="CanvasLayer" unique_id=1261672203]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -31.0
+offset_top = -21.0
+offset_right = 9.0
+offset_bottom = 19.0
+grow_horizontal = 2
+scale = Vector2(2, 2)
+icon = ExtResource("11_4lxdi")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="inventario" type="TextureRect" parent="CanvasLayer" unique_id=2029730666]
+propagate_maximum_size = true
+clip_contents = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -262.0
+offset_top = -215.0
+offset_right = -15.0
+offset_bottom = -79.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(2, 2)
+offset_transform_enabled = true
+offset_transform_position = Vector2(-20, 0)
+offset_transform_visual_only = false
+texture = ExtResource("12_r0ss3")
+
+[node name="caixinha1" type="TextureRect" parent="CanvasLayer/inventario" unique_id=438053855]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4959514
+anchor_top = 0.9742647
+anchor_right = 0.4959514
+anchor_bottom = 0.9742647
+offset_left = -1.0
+offset_top = -89.5
+offset_right = 31.0
+offset_bottom = -57.5
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("13_pumot")
+metadata/_edit_use_anchors_ = true
+
+[node name="Chave 1" type="TextureRect" parent="CanvasLayer/inventario" unique_id=1944358520]
+visible = false
+layout_mode = 0
+offset_left = 130.5
+offset_top = 51.5
+offset_right = 168.0
+offset_bottom = 89.0
+texture = ExtResource("14_qni7f")
+
+[node name="Chave philips 1" type="TextureRect" parent="CanvasLayer/inventario" unique_id=291344291]
+visible = false
+layout_mode = 0
+offset_left = 130.5
+offset_top = 51.5
+offset_right = 168.0
+offset_bottom = 89.0
+texture = ExtResource("15_5i8ok")
+
+[node name="Vitoria" type="TextureRect" parent="CanvasLayer" unique_id=1467347796]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("16_c2jh7")
+
+[node name="pontos" type="Label" parent="CanvasLayer/Vitoria" unique_id=425545707]
+layout_mode = 0
+offset_left = 706.0
+offset_top = 455.0
+offset_right = 1008.0
+offset_bottom = 512.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_52psa")
+theme_override_font_sizes/font_size = 40
+vertical_alignment = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Botao despausar" to="." method="_on_botao_despausar_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Botao despausar" to="CanvasLayer" method="_on_botao_despausar_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Botao voltar para o menu pausa" to="CanvasLayer" method="_on_botao_voltar_para_o_menu_pausa_pressed"]
+[connection signal="pressed" from="CanvasLayer/Botao Lista" to="CanvasLayer" method="_on_botao_lista_pressed"]
+[connection signal="pressed" from="CanvasLayer/Papelzao/Voltar" to="CanvasLayer" method="_on_voltar_pressed"]
+[connection signal="pressed" from="CanvasLayer/Papelzao/Voltar" to="CanvasLayer" method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Botao voltar para o menu perdeu" to="CanvasLayer" method="_on_botao_voltar_para_o_menu_perdeu_pressed"]
+[connection signal="pressed" from="CanvasLayer/Pausar" to="." method="_on_pausar_pressed"]
+[connection signal="pressed" from="CanvasLayer/Pausar" to="CanvasLayer" method="_on_pausar_pressed"]

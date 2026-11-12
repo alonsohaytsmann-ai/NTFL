@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://clx8smjrakgjh"
-path="res://.godot/imported/perdeu.mp3-6755628aa2e7fbfbbb424bee4da89a1c.mp3str"
+path="res://.godot/imported/perdeu.mp3-e995dd1c9e761d250db6497325e1fb78.mp3str"
 
 [deps]
 
-source_file="res://Musica do jogo/perdeu.mp3"
-dest_files=["res://.godot/imported/perdeu.mp3-6755628aa2e7fbfbbb424bee4da89a1c.mp3str"]
+source_file="res://Musicas/perdeu.mp3"
+dest_files=["res://.godot/imported/perdeu.mp3-e995dd1c9e761d250db6497325e1fb78.mp3str"]
 
 [params]
 

@@ -1,0 +1,363 @@
+[gd_scene format=3 uid="uid://lkagrve0umb3"]
+
+[ext_resource type="Script" uid="uid://ugxe0hddfdoe" path="res://Scripts/tutorial_interface.gd" id="1_6fndv"]
+[ext_resource type="Texture2D" uid="uid://dosb4upxb3osf" path="res://Sprites/Menu-Tutorial/tutorial menu.png" id="2_t30qa"]
+[ext_resource type="Texture2D" uid="uid://cafvwtvkol777" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa1.png" id="3_km1q4"]
+[ext_resource type="Texture2D" uid="uid://bvcv5g44nj3ey" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas1.png" id="3_w6q48"]
+[ext_resource type="Texture2D" uid="uid://s7f1snnyiwsx" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa2.png" id="4_00awq"]
+[ext_resource type="Texture2D" uid="uid://juy11cyy3tya" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas2.png" id="4_ho0sn"]
+[ext_resource type="Texture2D" uid="uid://by1h0hf42bggr" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas3.png" id="5_tw4bl"]
+[ext_resource type="Texture2D" uid="uid://dlmiwc0b1t70" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa3.png" id="5_wyvub"]
+[ext_resource type="Texture2D" uid="uid://rqe13cakpvp4" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa4.png" id="6_54p1r"]
+[ext_resource type="Texture2D" uid="uid://cyee2mv50b2v2" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas4.png" id="6_sl86c"]
+[ext_resource type="Texture2D" uid="uid://c4ngevx00ivuo" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas5.png" id="7_6s5on"]
+[ext_resource type="Texture2D" uid="uid://bwgaoqh1b0gfm" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa5.png" id="7_pg41f"]
+[ext_resource type="Texture2D" uid="uid://ds4rlpjapbfx3" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa6.png" id="8_k7x0a"]
+[ext_resource type="Texture2D" uid="uid://qdcxqfedy6o7" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas6.png" id="8_sc3ha"]
+[ext_resource type="Texture2D" uid="uid://dc2ydet0a7tmo" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa7.png" id="9_2dp24"]
+[ext_resource type="Texture2D" uid="uid://c405yvy1u5bn4" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas7.png" id="9_qmc56"]
+[ext_resource type="Texture2D" uid="uid://cttggckl6u3ed" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas9.png" id="10_iqey7"]
+[ext_resource type="Texture2D" uid="uid://c8iui0dddincn" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa8.png" id="10_og38n"]
+[ext_resource type="Texture2D" uid="uid://ckcifgvof4x8j" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas10.png" id="11_3ghkx"]
+[ext_resource type="Texture2D" uid="uid://byrlx3ck0hygs" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa9.png" id="11_cl88b"]
+[ext_resource type="Texture2D" uid="uid://dvdwr26vl4u6l" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas11.png" id="12_78bq7"]
+[ext_resource type="Texture2D" uid="uid://dvjm4mb1dhhwy" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa10.png" id="12_vk4au"]
+[ext_resource type="Texture2D" uid="uid://brmeojm5ubvj6" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa11.png" id="13_k5fg3"]
+[ext_resource type="Texture2D" uid="uid://cr4gkqutyfbl1" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas12.png" id="13_kkt0c"]
+[ext_resource type="Texture2D" uid="uid://l58ui1u4wmjh" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa13.png" id="14_g3top"]
+[ext_resource type="Texture2D" uid="uid://7i1rrfyvt2pw" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas13.png" id="14_havkr"]
+[ext_resource type="Texture2D" uid="uid://61pfs5hwrvas" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa12.png" id="15_f5cc5"]
+[ext_resource type="Texture2D" uid="uid://cqmm314gwtxgr" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas14.png" id="15_qqa5n"]
+[ext_resource type="Texture2D" uid="uid://dsij3fn5dkqx0" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas15.png" id="16_rjkfl"]
+[ext_resource type="Texture2D" uid="uid://ctp7dnbl83f22" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa14.png" id="16_weoi5"]
+[ext_resource type="Texture2D" uid="uid://78ynpmfu82gv" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas16.png" id="17_5tasr"]
+[ext_resource type="Texture2D" uid="uid://cn1uwnr5x8ois" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa15.png" id="17_snjmx"]
+[ext_resource type="Texture2D" uid="uid://bjwkbxr7w54au" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa16.png" id="18_8vqst"]
+[ext_resource type="Texture2D" uid="uid://bdu8w53x7tnry" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas17.png" id="18_gvenl"]
+[ext_resource type="Texture2D" uid="uid://fulsohkche8b" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa17.png" id="19_t2lab"]
+[ext_resource type="Texture2D" uid="uid://dj0bm5sqfu40g" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas18.png" id="19_wkeqj"]
+[ext_resource type="Texture2D" uid="uid://bo1lo6c43vg33" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa19.png" id="20_w6q48"]
+[ext_resource type="Texture2D" uid="uid://c3gpmc7rkp6gk" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas19.png" id="20_ww6nu"]
+[ext_resource type="Texture2D" uid="uid://64x58ai6pur0" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa18.png" id="21_ho0sn"]
+[ext_resource type="Texture2D" uid="uid://dnep2eq6gs4gg" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa20.png" id="22_tw4bl"]
+[ext_resource type="Texture2D" uid="uid://d3xsdj2lrku7h" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa21.png" id="23_sl86c"]
+[ext_resource type="Texture2D" uid="uid://btcwq043eemcu" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa22.png" id="24_6s5on"]
+[ext_resource type="Texture2D" uid="uid://mb4st8xe8o8v" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa23.png" id="25_sc3ha"]
+[ext_resource type="Texture2D" uid="uid://28p2bif2hu3h" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa24.png" id="26_qmc56"]
+[ext_resource type="Texture2D" uid="uid://jvo2dubvaq8w" path="res://Sprites/imagens tutorial/interface.png" id="45_ho0sn"]
+[ext_resource type="Texture2D" uid="uid://c1n75ychonjut" path="res://Sprites/imagens tutorial/seta.png" id="46_sl86c"]
+[ext_resource type="FontFile" uid="uid://d32tsijie0urt" path="res://Fonte/PressStart2P-Regular.ttf" id="47_6s5on"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_w6q48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ho0sn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tw4bl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_sl86c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6s5on")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_sc3ha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_qmc56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_iqey7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_3ghkx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_78bq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_kkt0c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_havkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_qqa5n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_rjkfl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_5tasr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_gvenl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_wkeqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ww6nu")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yf5fn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_km1q4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_00awq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wyvub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_54p1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pg41f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_k7x0a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2dp24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_og38n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cl88b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_vk4au")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_k5fg3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_g3top")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_f5cc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_weoi5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_snjmx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_8vqst")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_t2lab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_w6q48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ho0sn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_tw4bl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_sl86c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_6s5on")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_sc3ha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_qmc56")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 21.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
+bg_color = Color(0.75696844, 0.44151163, 0.9124175, 0)
+draw_center = false
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 0.94509804, 0.8901961, 1)
+border_blend = true
+corner_detail = 7
+
+[node name="Control" type="Control" unique_id=448234003]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6fndv")
+
+[node name="fundo" type="TextureRect" parent="." unique_id=1899021385]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_t30qa")
+
+[node name="animacao fundo" type="AnimatedSprite2D" parent="fundo" unique_id=1508256313]
+visible = false
+position = Vector2(576.50006, 323.5)
+scale = Vector2(2.3979168, 2.3860295)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+frame = 17
+frame_progress = 1.0
+
+[node name="Proximo" type="Button" parent="." unique_id=2112047665]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 814.00006
+offset_top = 280.0
+offset_right = 924.00006
+offset_bottom = 352.0
+scale = Vector2(1.3, 1.3)
+offset_transform_enabled = true
+flat = true
+icon_alignment = 1
+
+[node name="animacao proximo" type="AnimatedSprite2D" parent="Proximo" unique_id=1805006801]
+position = Vector2(60, 37)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_yf5fn")
+autoplay = "default"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=431787589]
+top_level = true
+texture_filter = 1
+layout_mode = 0
+offset_left = 297.0
+offset_top = 168.0
+offset_right = 787.0
+offset_bottom = 445.0
+texture = ExtResource("45_ho0sn")
+expand_mode = 1
+
+[node name="Label2" type="Label" parent="TextureRect" unique_id=1002035634]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 316.0
+offset_right = 396.0
+offset_bottom = 384.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("47_6s5on")
+theme_override_font_sizes/font_size = 12
+text = "Esse é o inventario
+os itens que vc coletar
+aparecerão aqui!"
+
+[node name="Seta4" type="TextureRect" parent="TextureRect" unique_id=360701669]
+layout_mode = 0
+offset_left = 222.0
+offset_top = 277.0
+offset_right = 262.0
+offset_bottom = 317.0
+texture = ExtResource("46_sl86c")
+
+[node name="PanelContainer" type="PanelContainer" parent="TextureRect" unique_id=332236264]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_g4v7s")
+
+[node name="Label" type="Label" parent="TextureRect" unique_id=1480285332]
+layout_mode = 0
+offset_left = -297.0
+offset_top = -168.0
+offset_right = -257.0
+offset_bottom = -145.0
+
+[node name="Seta" type="TextureRect" parent="TextureRect" unique_id=1562773994]
+layout_mode = 0
+offset_left = 445.0
+offset_top = -40.0
+offset_right = 485.0
+texture = ExtResource("46_sl86c")
+flip_v = true
+
+[node name="Seta3" type="TextureRect" parent="TextureRect" unique_id=1021062791]
+layout_mode = 0
+offset_left = 56.0
+offset_top = -40.0
+offset_right = 96.0
+texture = ExtResource("46_sl86c")
+flip_h = true
+flip_v = true
+
+[node name="Label3" type="Label" parent="TextureRect" unique_id=2007196948]
+layout_mode = 0
+offset_left = 289.0
+offset_top = -113.0
+offset_right = 565.0
+offset_bottom = -38.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("47_6s5on")
+theme_override_font_sizes/font_size = 12
+text = "Essa é a lista, 
+quando voce clicar
+ podera ver todos os 
+objetivos  que ja fez e
+os que ainda faltam!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="TextureRect" unique_id=131220372]
+layout_mode = 0
+offset_left = -31.0
+offset_top = -89.0
+offset_right = 173.0
+offset_bottom = -44.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("47_6s5on")
+theme_override_font_sizes/font_size = 12
+text = "Esse é o timer,
+quando ele 
+zerar você perde!"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="TextureRect" unique_id=164058358]
+layout_mode = 0
+offset_left = -51.0
+offset_top = -107.0
+offset_right = -11.0
+offset_bottom = -84.0
+
+[node name="Label6" type="Label" parent="TextureRect" unique_id=1046116369]
+layout_mode = 0
+offset_left = -25.0
+offset_top = -127.0
+offset_right = 135.0
+offset_bottom = -104.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("47_6s5on")
+text = "Interface:"
+
+[connection signal="animation_finished" from="fundo/animacao fundo" to="." method="_on_animacao_fundo_animation_finished"]
+[connection signal="pressed" from="Proximo" to="." method="_on_proximo_pressed"]

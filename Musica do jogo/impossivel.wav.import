@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cjru5uu2y6cd0"
+path="res://.godot/imported/impossivel.wav-70b23ea2bd603368921f3e5470598416.sample"
+
+[deps]
+
+source_file="res://Musica do jogo/impossivel.wav"
+dest_files=["res://.godot/imported/impossivel.wav-70b23ea2bd603368921f3e5470598416.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

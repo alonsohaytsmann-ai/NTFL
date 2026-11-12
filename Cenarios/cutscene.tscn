@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://jusb1vxgsfkp"]
+
+[ext_resource type="Script" uid="uid://dj5j2yihc7oha" path="res://Scripts/cutscene.gd" id="1_amoa2"]
+[ext_resource type="Texture2D" uid="uid://daic6tccqi5qk" path="res://Sprites/imagens menu dificuldade/voltar-mode-button.png" id="2_47ww4"]
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_47ww4"]
+file = "res://Sprites/cutscene (1).ogv"
+
+[node name="Control" type="Control" unique_id=1862661981]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_amoa2")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1899208287]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = SubResource("VideoStreamTheora_47ww4")
+autoplay = true
+expand = true
+
+[node name="Button" type="Button" parent="." unique_id=1410492033]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 61.0
+offset_top = -109.0
+offset_right = 164.0
+offset_bottom = -72.0
+grow_vertical = 0
+scale = Vector2(2, 2)
+icon = ExtResource("2_47ww4")
+flat = true
+expand_icon = true
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

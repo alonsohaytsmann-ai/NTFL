@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://ds4ihapjbp64s"]
+[gd_scene format=3 uid="uid://drfo45ao7s81u"]
 
-[ext_resource type="Script" uid="uid://0yjp8byagqol" path="res://Scripts/timer.gd" id="1_qdhxh"]
+[ext_resource type="Script" path="res://Scripts/timer.gd" id="1_qdhxh"]
 [ext_resource type="FontFile" uid="uid://d32tsijie0urt" path="res://Fonte/PressStart2P-Regular.ttf" id="2_ye2uk"]
 [ext_resource type="Texture2D" uid="uid://co8vr0b821jpu" path="res://Sprites/imagens desligar pc/bloco-minigame1.png" id="3_o6fnk"]
 [ext_resource type="Texture2D" uid="uid://damkjpnas6fww" path="res://Sprites/lista global/Lista-principal.png" id="4_mxtnu"]
@@ -252,5 +252,5 @@ icon_alignment = 1
 [connection signal="pressed" from="VBoxContainer/Botao voltar para o menu pausa" to="." method="_on_botao_voltar_para_o_menu_pausa_pressed"]
 [connection signal="pressed" from="Botao voltar para o menu perdeu" to="." method="_on_botao_voltar_para_o_menu_perdeu_pressed"]
 [connection signal="pressed" from="Botao Lista" to="." method="_on_botao_lista_pressed"]
-[connection signal="pressed" from="Papelzao/Voltar" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Papelzao/Voltar" to="." method="_on_voltar_pressed"]
+[connection signal="pressed" from="Papelzao/Voltar" to="." method="_on_button_pressed"]
