@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://0ng1ocqu1mbo"]
 
 [ext_resource type="Script" uid="uid://c85ssdw00uj15" path="res://Scripts/creditos.gd" id="1_ed3ks"]
-[ext_resource type="Texture2D" uid="uid://damkjpnas6fww" path="res://Sprites/lista global/Lista-principal.png" id="2_ed3ks"]
+[ext_resource type="Texture2D" uid="uid://byve7widyd86s" path="res://Sprites/imagens menu/menu.png" id="2_80t7d"]
 [ext_resource type="FontFile" uid="uid://d32tsijie0urt" path="res://Fonte/PressStart2P-Regular.ttf" id="2_x6jei"]
+[ext_resource type="Texture2D" uid="uid://daic6tccqi5qk" path="res://Sprites/imagens menu dificuldade/voltar-mode-button.png" id="4_vs4bl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
 font_color = Color(0, 0, 0, 1)
@@ -25,18 +26,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_ed3ks")
+texture = ExtResource("2_80t7d")
 expand_mode = 2
 
 [node name="Label" type="Label" parent="TextureRect" unique_id=1353705402]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -576.0
-offset_top = -324.0
+anchor_left = 0.18055555
+anchor_top = 0.41049382
+anchor_right = 0.1814236
+anchor_bottom = 0.41049382
+offset_left = 173.0
+offset_top = -258.0
 offset_right = 576.0
 offset_bottom = 324.0
 grow_horizontal = 2
@@ -63,16 +64,21 @@ Rodrigo Santos"
 label_settings = SubResource("LabelSettings_g4v7s")
 horizontal_alignment = 1
 vertical_alignment = 1
-autowrap_mode = 1
+autowrap_mode = 3
 metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="TextureRect/Label" unique_id=903043303]
 layout_mode = 0
-offset_left = 43.0
-offset_top = 550.0
-offset_right = 267.0
-offset_bottom = 620.0
+offset_left = -9.0
+offset_top = 515.0
+offset_right = 150.0
+offset_bottom = 567.0
 theme_override_fonts/font = ExtResource("2_x6jei")
-text = "VOLTAR"
+icon = ExtResource("4_vs4bl")
+flat = true
+alignment = 2
+autowrap_mode = 2
+vertical_icon_alignment = 0
+expand_icon = true
 
 [connection signal="pressed" from="TextureRect/Label/Button" to="." method="_on_button_pressed"]

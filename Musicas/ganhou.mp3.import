@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dyq2hc1ukh5mp"
-path="res://.godot/imported/ganhou.mp3-dd29edd1d916974c7a61a3785543eceb.mp3str"
+path="res://.godot/imported/ganhou.mp3-7538fc1ae812147f172a2e3d90136859.mp3str"
 
 [deps]
 
-source_file="res://Musica do jogo/ganhou.mp3"
-dest_files=["res://.godot/imported/ganhou.mp3-dd29edd1d916974c7a61a3785543eceb.mp3str"]
+source_file="res://Musicas/ganhou.mp3"
+dest_files=["res://.godot/imported/ganhou.mp3-7538fc1ae812147f172a2e3d90136859.mp3str"]
 
 [params]
 

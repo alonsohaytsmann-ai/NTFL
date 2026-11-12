@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://c3sx4nfm5s1cp"]
+
+[ext_resource type="Script" uid="uid://cpryboccr0oyk" path="res://Scripts/tutorial_lista.gd" id="1_6nbdq"]
+[ext_resource type="Texture2D" uid="uid://dosb4upxb3osf" path="res://Sprites/Menu-Tutorial/tutorial menu.png" id="2_i58p6"]
+[ext_resource type="Texture2D" uid="uid://ch56vali5tbo0" path="res://Sprites/imagens tutorial/Lista.png" id="4_lttwh"]
+[ext_resource type="FontFile" uid="uid://d32tsijie0urt" path="res://Fonte/PressStart2P-Regular.ttf" id="5_n4wwu"]
+[ext_resource type="Texture2D" uid="uid://b3l08c0vfxswr" path="res://Sprites/imagens menu/Sair-buttom.png" id="21_fq1jk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
+bg_color = Color(1, 0.9452769, 0.8901186, 0)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 0.94509804, 0.8901961, 1)
+border_blend = true
+
+[node name="Control" type="Control" unique_id=1732853796]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6nbdq")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=295275213]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_i58p6")
+
+[node name="Sair" type="Button" parent="." unique_id=24265974]
+layout_mode = 0
+offset_left = 694.0
+offset_top = 498.0
+offset_right = 813.0
+offset_bottom = 547.0
+icon = ExtResource("21_fq1jk")
+flat = true
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1585022618]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 225.0
+offset_right = 804.0
+offset_bottom = 479.0
+texture = ExtResource("4_lttwh")
+expand_mode = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="TextureRect2" unique_id=713572836]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_g4v7s")
+
+[node name="Label" type="Label" parent="." unique_id=1987036581]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 47.0
+offset_right = 509.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_n4wwu")
+text = "Minigame Lista:"
+
+[node name="Label2" type="Label" parent="." unique_id=122797086]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 74.0
+offset_right = 838.0
+offset_bottom = 242.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_n4wwu")
+theme_override_font_sizes/font_size = 12
+text = "\"O objetivo deste minigame é escolher entre duas 
+opções qual delas é a mais sustentável. Para
+isso, basta clicar em alguma das alternativas. 
+Fazendo isso 3 vezes, você terá terminado!\""
+
+[connection signal="pressed" from="Sair" to="." method="_on_sair_pressed"]

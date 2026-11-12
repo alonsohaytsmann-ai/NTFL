@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://bexddisc06u4l"]
 
-[ext_resource type="Script" uid="uid://y23hck5q7nfq" path="res://tela_do_menu.gd" id="1_rga5v"]
-[ext_resource type="Texture2D" uid="uid://crmclkondojo3" path="res://imagens garagem/banana.jpg" id="2_rga5v"]
-[ext_resource type="Texture2D" uid="uid://byve7widyd86s" path="res://imagens menu/menu.png" id="2_tybat"]
-[ext_resource type="Texture2D" uid="uid://bnnmdtsmt46hq" path="res://imagens menu/Jogar-buttom.png" id="5_v55gm"]
-[ext_resource type="Texture2D" uid="uid://b3l08c0vfxswr" path="res://imagens menu/Sair-buttom.png" id="6_lwser"]
-[ext_resource type="Texture2D" uid="uid://bilnr5cflshx2" path="res://imagens menu/Creditos-buttom (1).png" id="6_v55gm"]
+[ext_resource type="Script" uid="uid://y23hck5q7nfq" path="res://Scripts/tela_do_menu.gd" id="1_rga5v"]
+[ext_resource type="Texture2D" uid="uid://crmclkondojo3" path="res://Sprites/imagens lixo/banana.jpg" id="2_rga5v"]
+[ext_resource type="Texture2D" uid="uid://byve7widyd86s" path="res://Sprites/imagens menu/menu.png" id="2_tybat"]
+[ext_resource type="Texture2D" uid="uid://bnnmdtsmt46hq" path="res://Sprites/imagens menu/Jogar-buttom.png" id="5_v55gm"]
+[ext_resource type="Texture2D" uid="uid://b3l08c0vfxswr" path="res://Sprites/imagens menu/Sair-buttom.png" id="6_lwser"]
+[ext_resource type="Texture2D" uid="uid://bilnr5cflshx2" path="res://Sprites/imagens menu/Creditos-buttom (1).png" id="6_v55gm"]
+[ext_resource type="Texture2D" uid="uid://del0csifg5dap" path="res://Sprites/NTFL-logo.png" id="7_r27nf"]
 
 [node name="TelaDoMenu" type="Control" unique_id=382817797]
 layout_mode = 3
@@ -46,10 +47,10 @@ expand_mode = 4
 
 [node name="Novo Jogo" type="TextureButton" parent="." unique_id=1124425019]
 layout_mode = 0
-offset_left = 460.0
-offset_top = 253.0
+offset_left = 460.00003
+offset_top = 287.0
 offset_right = 610.0
-offset_bottom = 319.6667
+offset_bottom = 353.6667
 scale = Vector2(1.5, 1.5)
 size_flags_horizontal = 4
 texture_normal = ExtResource("5_v55gm")
@@ -59,9 +60,9 @@ stretch_mode = 3
 [node name="Creditos" type="TextureButton" parent="." unique_id=941618577]
 layout_mode = 1
 offset_left = 478.0
-offset_top = 389.0
+offset_top = 422.0
 offset_right = 658.0
-offset_bottom = 450.0
+offset_bottom = 483.0
 offset_transform_enabled = true
 texture_normal = ExtResource("6_v55gm")
 ignore_texture_size = true
@@ -70,12 +71,25 @@ stretch_mode = 3
 [node name="Sair" type="TextureButton" parent="." unique_id=1777999742]
 layout_mode = 0
 offset_left = 519.0
-offset_top = 502.0
+offset_top = 514.0
 offset_right = 623.0
-offset_bottom = 542.0
+offset_bottom = 554.0
 size_flags_horizontal = 4
 texture_normal = ExtResource("6_lwser")
 ignore_texture_size = true
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1278694938]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -193.0
+offset_top = 91.0
+offset_right = 127.0
+offset_bottom = 271.0
+grow_horizontal = 2
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("7_r27nf")
 
 [connection signal="pressed" from="Novo Jogo" to="." method="_on_novo_jogo_pressed"]
 [connection signal="pressed" from="Creditos" to="." method="_on_creditos_pressed"]

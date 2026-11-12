@@ -1,0 +1,298 @@
+[gd_scene format=3 uid="uid://b7r4uuirfhd3m"]
+
+[ext_resource type="Script" uid="uid://8vvbwyd77x2p" path="res://Scripts/tutorial_desligar_pc.gd" id="1_d7hu5"]
+[ext_resource type="Texture2D" uid="uid://dosb4upxb3osf" path="res://Sprites/Menu-Tutorial/tutorial menu.png" id="2_kwhkk"]
+[ext_resource type="Texture2D" uid="uid://bvcv5g44nj3ey" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas1.png" id="3_f07eo"]
+[ext_resource type="Texture2D" uid="uid://juy11cyy3tya" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas2.png" id="4_uwvew"]
+[ext_resource type="Texture2D" uid="uid://by1h0hf42bggr" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas3.png" id="5_mlvd6"]
+[ext_resource type="Texture2D" uid="uid://cyee2mv50b2v2" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas4.png" id="6_sn3mu"]
+[ext_resource type="Texture2D" uid="uid://c4ngevx00ivuo" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas5.png" id="7_8kifx"]
+[ext_resource type="Texture2D" uid="uid://qdcxqfedy6o7" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas6.png" id="8_qb3gs"]
+[ext_resource type="Texture2D" uid="uid://c405yvy1u5bn4" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas7.png" id="9_du617"]
+[ext_resource type="Texture2D" uid="uid://cttggckl6u3ed" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas9.png" id="10_0ctio"]
+[ext_resource type="Texture2D" uid="uid://ckcifgvof4x8j" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas10.png" id="11_n701h"]
+[ext_resource type="Texture2D" uid="uid://dvdwr26vl4u6l" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas11.png" id="12_g4o10"]
+[ext_resource type="Texture2D" uid="uid://cr4gkqutyfbl1" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas12.png" id="13_sgloc"]
+[ext_resource type="Texture2D" uid="uid://7i1rrfyvt2pw" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas13.png" id="14_4sote"]
+[ext_resource type="Texture2D" uid="uid://cqmm314gwtxgr" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas14.png" id="15_acpch"]
+[ext_resource type="Texture2D" uid="uid://dsij3fn5dkqx0" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas15.png" id="16_l1xvo"]
+[ext_resource type="Texture2D" uid="uid://78ynpmfu82gv" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas16.png" id="17_gqi3b"]
+[ext_resource type="Texture2D" uid="uid://bdu8w53x7tnry" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas17.png" id="18_glms2"]
+[ext_resource type="Texture2D" uid="uid://dj0bm5sqfu40g" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas18.png" id="19_b80ik"]
+[ext_resource type="Texture2D" uid="uid://c3gpmc7rkp6gk" path="res://Sprites/Menu-Tutorial/troca de folhas animação/tutorial troca de folhas19.png" id="20_2xu6n"]
+[ext_resource type="Texture2D" uid="uid://cafvwtvkol777" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa1.png" id="21_6oiof"]
+[ext_resource type="Texture2D" uid="uid://s7f1snnyiwsx" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa2.png" id="22_epqv4"]
+[ext_resource type="Texture2D" uid="uid://dlmiwc0b1t70" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa3.png" id="23_orje6"]
+[ext_resource type="Texture2D" uid="uid://rqe13cakpvp4" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa4.png" id="24_qagln"]
+[ext_resource type="Texture2D" uid="uid://bwgaoqh1b0gfm" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa5.png" id="25_njdno"]
+[ext_resource type="Texture2D" uid="uid://ds4rlpjapbfx3" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa6.png" id="26_vlrnq"]
+[ext_resource type="Texture2D" uid="uid://dc2ydet0a7tmo" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa7.png" id="27_mvd0v"]
+[ext_resource type="Texture2D" uid="uid://c8iui0dddincn" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa8.png" id="28_v4e1h"]
+[ext_resource type="Texture2D" uid="uid://byrlx3ck0hygs" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa9.png" id="29_yh8kq"]
+[ext_resource type="Texture2D" uid="uid://dvjm4mb1dhhwy" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa10.png" id="30_2cl0x"]
+[ext_resource type="Texture2D" uid="uid://brmeojm5ubvj6" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa11.png" id="31_2feka"]
+[ext_resource type="Texture2D" uid="uid://l58ui1u4wmjh" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa13.png" id="32_fmrcl"]
+[ext_resource type="Texture2D" uid="uid://61pfs5hwrvas" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa12.png" id="33_c1e0n"]
+[ext_resource type="Texture2D" uid="uid://ctp7dnbl83f22" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa14.png" id="34_03ovq"]
+[ext_resource type="Texture2D" uid="uid://cn1uwnr5x8ois" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa15.png" id="35_dxd27"]
+[ext_resource type="Texture2D" uid="uid://bjwkbxr7w54au" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa16.png" id="36_iikjb"]
+[ext_resource type="Texture2D" uid="uid://fulsohkche8b" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa17.png" id="37_p5omv"]
+[ext_resource type="Texture2D" uid="uid://bo1lo6c43vg33" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa19.png" id="38_pyluh"]
+[ext_resource type="Texture2D" uid="uid://64x58ai6pur0" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa18.png" id="39_cgla1"]
+[ext_resource type="Texture2D" uid="uid://dnep2eq6gs4gg" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa20.png" id="40_w6hfn"]
+[ext_resource type="Texture2D" uid="uid://d3xsdj2lrku7h" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa21.png" id="41_omp4u"]
+[ext_resource type="Texture2D" uid="uid://btcwq043eemcu" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa22.png" id="42_0ll56"]
+[ext_resource type="Texture2D" uid="uid://mb4st8xe8o8v" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa23.png" id="43_2o3gp"]
+[ext_resource type="Texture2D" uid="uid://28p2bif2hu3h" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa24.png" id="44_hyxkm"]
+[ext_resource type="Texture2D" uid="uid://d4m6ldsdfcji" path="res://Sprites/imagens tutorial/PC.png" id="45_pwkls"]
+[ext_resource type="FontFile" uid="uid://d32tsijie0urt" path="res://Fonte/PressStart2P-Regular.ttf" id="46_kwhkk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_f07eo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uwvew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_mlvd6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_sn3mu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8kifx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qb3gs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_du617")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0ctio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_n701h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_g4o10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_sgloc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4sote")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_acpch")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_l1xvo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_gqi3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_glms2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_b80ik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_2xu6n")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yf5fn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_6oiof")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_epqv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_orje6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_qagln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_njdno")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_vlrnq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_mvd0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_v4e1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_yh8kq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_2cl0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_2feka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_fmrcl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_c1e0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_03ovq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_dxd27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_iikjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_p5omv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_pyluh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_cgla1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_w6hfn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_omp4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_0ll56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_2o3gp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_hyxkm")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 21.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
+bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 0.94509804, 0.8901961, 1)
+border_blend = true
+
+[node name="Control" type="Control" unique_id=289928650]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d7hu5")
+
+[node name="fundo" type="TextureRect" parent="." unique_id=1899021385]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_kwhkk")
+
+[node name="animacao fundo" type="AnimatedSprite2D" parent="fundo" unique_id=1508256313]
+visible = false
+position = Vector2(576.50006, 323.5)
+scale = Vector2(2.3979168, 2.3860295)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+frame = 17
+frame_progress = 1.0
+
+[node name="Proximo" type="Button" parent="." unique_id=2112047665]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 814.00006
+offset_top = 280.0
+offset_right = 924.00006
+offset_bottom = 352.0
+scale = Vector2(1.3, 1.3)
+offset_transform_enabled = true
+flat = true
+icon_alignment = 1
+
+[node name="animacao proximo" type="AnimatedSprite2D" parent="Proximo" unique_id=1805006801]
+position = Vector2(60, 37)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_yf5fn")
+autoplay = "default"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=89171034]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -249.0
+offset_top = -89.0
+offset_right = 222.0
+offset_bottom = 189.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("45_pwkls")
+expand_mode = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="TextureRect" unique_id=1471554969]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_g4v7s")
+
+[node name="Label" type="Label" parent="TextureRect" unique_id=3441571]
+layout_mode = 0
+offset_left = -56.0
+offset_top = -190.0
+offset_right = 280.0
+offset_bottom = -167.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("46_kwhkk")
+text = "Minigame Desligar PC:"
+
+[node name="Label2" type="Label" parent="TextureRect" unique_id=1695398887]
+layout_mode = 0
+offset_left = -62.0
+offset_top = -139.0
+offset_right = 526.0
+offset_bottom = -30.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("46_kwhkk")
+theme_override_font_sizes/font_size = 12
+text = "\"Aqui o objetivo é clicar nos ícones vermelhos, 
+que mudam de posição constantemente. Se você
+pressioná-lo 10 vezes, ganhará o minigame!
+
+ATENÇÃO: Cuidado para não apertar o botão com o 
+ícone de caveira; caso você o pressione 3 vezes, 
+perderá o jogo!\""
+
+[connection signal="animation_finished" from="fundo/animacao fundo" to="." method="_on_animacao_fundo_animation_finished"]
+[connection signal="pressed" from="Proximo" to="." method="_on_proximo_pressed"]

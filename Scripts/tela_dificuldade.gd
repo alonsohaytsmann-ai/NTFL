@@ -9,31 +9,31 @@ func _on_voltar_pressed() -> void:
 
 
 func _on_animacao_facil_animation_finished() -> void:
-	await Fader.fade_in(0.5)
 	Global.Escolher_dificuldade(Global.Dificuldade.Facil)
 	await get_tree().create_timer(0.2).timeout
-	get_tree().change_scene_to_file("res://Cenarios/Cenario1.tscn")
+	await Fader.fade_in(0.5)
+	get_tree().change_scene_to_file("res://Cenarios/cutscene.tscn")
 
 
 func _on_animacao_medio_animation_finished() -> void:
-	await Fader.fade_in(0.5)
 	Global.Escolher_dificuldade(Global.Dificuldade.Medio)
 	await get_tree().create_timer(0.2).timeout
-	get_tree().change_scene_to_file("res://Cenarios/Cenario1.tscn")
+	await Fader.fade_in(0.5)
+	get_tree().change_scene_to_file("res://Cenarios/cutscene.tscn")
 
 
 func _on_animacao_dificil_animation_finished() -> void:
-	await Fader.fade_in(0.5)
 	Global.Escolher_dificuldade(Global.Dificuldade.Dificil)
 	await get_tree().create_timer(0.2).timeout
-	get_tree().change_scene_to_file("res://Cenarios/Cenario1.tscn")
+	await Fader.fade_in(0.5)
+	get_tree().change_scene_to_file("res://Cenarios/cutscene.tscn")
 
 
 func _on_animacao_impossivel_animation_finished() -> void:
-	await Fader.fade_in(0.5)
 	Global.Escolher_dificuldade(Global.Dificuldade.Impossivel)
 	await get_tree().create_timer(0.2).timeout
-	get_tree().change_scene_to_file("res://Cenarios/Cenario1.tscn")
+	await Fader.fade_in(0.5)
+	get_tree().change_scene_to_file("res://Cenarios/cutscene.tscn")
 
 
 func _on_facil_pressed() -> void:
@@ -50,3 +50,8 @@ func _on_dificil_pressed() -> void:
 
 func _on_impossivel_pressed() -> void:
 	$"animacao impossivel".play("default")
+
+
+func _on_tutorial_pressed() -> void:
+	await Fader.fade_in(0.5)
+	get_tree().change_scene_to_file("res://Cenarios/Tutorial interface.tscn")
