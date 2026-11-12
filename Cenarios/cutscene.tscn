@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://jusb1vxgsfkp"]
 
 [ext_resource type="Script" uid="uid://dj5j2yihc7oha" path="res://Scripts/cutscene.gd" id="1_amoa2"]
-[ext_resource type="Texture2D" uid="uid://daic6tccqi5qk" path="res://Sprites/imagens menu dificuldade/voltar-mode-button.png" id="2_47ww4"]
+[ext_resource type="Texture2D" uid="uid://bqxk6pwnmnay7" path="res://Sprites/Passar-botão1.png" id="2_47ww4"]
 
 [sub_resource type="VideoStreamTheora" id="VideoStreamTheora_47ww4"]
 file = "res://Sprites/cutscene (1).ogv"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbr0e"]
+atlas = ExtResource("2_47ww4")
 
 [node name="Control" type="Control" unique_id=1862661981]
 layout_mode = 3
@@ -29,19 +32,23 @@ autoplay = true
 expand = true
 
 [node name="Button" type="Button" parent="." unique_id=1410492033]
+propagate_maximum_size = true
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 61.0
-offset_top = -109.0
-offset_right = 164.0
-offset_bottom = -72.0
+offset_left = 10.0
+offset_top = -213.0
+offset_right = 129.5
+offset_bottom = -113.0
 grow_vertical = 0
 scale = Vector2(2, 2)
-icon = ExtResource("2_47ww4")
+icon = SubResource("AtlasTexture_qbr0e")
 flat = true
+icon_alignment = 1
 expand_icon = true
 
 [connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
