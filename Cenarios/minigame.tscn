@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c7uqw5owns5x7" path="res://Scripts/minigame.gd" id="1_gdft7"]
 [ext_resource type="Texture2D" uid="uid://dw58fy1ovtmw6" path="res://Sprites/imagens minigame rodrigo/Sprite-minigame-escolhas3.png" id="2_50c0s"]
-[ext_resource type="Script" uid="uid://0yjp8byagqol" path="res://Scripts/timer.gd" id="4_0cput"]
+[ext_resource type="Script" uid="uid://0yjp8byagqol" path="res://Scripts/interface.gd" id="4_0cput"]
 [ext_resource type="FontFile" uid="uid://d32tsijie0urt" path="res://Fonte/PressStart2P-Regular.ttf" id="4_oemwr"]
 [ext_resource type="Texture2D" uid="uid://ci5pl4ak2bes4" path="res://Sprites/imagens menu perder/menu-perder.png" id="5_2u7ej"]
 [ext_resource type="Texture2D" uid="uid://co8vr0b821jpu" path="res://Sprites/imagens desligar pc/bloco-minigame1.png" id="6_nyqyt"]
@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dikwypeci52en" path="res://Sprites/Inventario/inventario-para-item.png" id="10_yqnhg"]
 [ext_resource type="Texture2D" uid="uid://isd1oqa85rhm" path="res://Sprites/imagens cenario 2/chave-saida.png" id="11_58tyv"]
 [ext_resource type="Texture2D" uid="uid://7n5oukn1ic4s" path="res://Sprites/imagens cenario 2/Chave-de-fenda.png" id="12_j3irj"]
-[ext_resource type="Texture2D" uid="uid://2ca63uysvnbk" path="res://Sprites/Vitoria/Victory.png" id="14_nyqyt"]
+[ext_resource type="Texture2D" uid="uid://ciauhkbx0422x" path="res://Sprites/Vitoria/Victory.png" id="14_nyqyt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o6fnk"]
 bg_color = Color(0.2784314, 0.2784314, 0.2784314, 0.7294118)
@@ -49,9 +49,9 @@ offset_bottom = 518.0
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=2054696162]
 layout_mode = 0
-offset_left = 322.0
+offset_left = 321.0
 offset_top = 384.0
-offset_right = 462.0
+offset_right = 461.0
 offset_bottom = 524.0
 
 [node name="mensagem" type="Label" parent="." unique_id=2038494583]
@@ -416,13 +416,28 @@ theme_override_fonts/font = ExtResource("4_oemwr")
 theme_override_font_sizes/font_size = 40
 vertical_alignment = 1
 
+[node name="Tutorial" type="Button" parent="." unique_id=2002903756]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.069000006
+anchor_bottom = 0.046000004
+offset_left = 1101.0
+offset_right = 1072.512
+offset_bottom = 21.191998
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_oemwr")
+theme_override_font_sizes/font_size = 43
+text = "?"
+flat = true
+
 [connection signal="pressed" from="botaoesquerdo" to="." method="_on_botao_esquerdo_pressed"]
 [connection signal="pressed" from="botaodireito" to="." method="_on_botao_direito_pressed"]
 [connection signal="pressed" from="Sair finalizado" to="." method="_on_sair_finalizado_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Botao despausar" to="CanvasLayer" method="_on_botao_despausar_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Botao voltar para o menu pausa" to="CanvasLayer" method="_on_botao_voltar_para_o_menu_pausa_pressed"]
 [connection signal="pressed" from="CanvasLayer/Botao Lista" to="CanvasLayer" method="_on_botao_lista_pressed"]
-[connection signal="pressed" from="CanvasLayer/Papelzao/Voltar" to="CanvasLayer" method="_on_voltar_pressed"]
 [connection signal="pressed" from="CanvasLayer/Papelzao/Voltar" to="CanvasLayer" method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Papelzao/Voltar" to="CanvasLayer" method="_on_voltar_pressed"]
 [connection signal="pressed" from="CanvasLayer/Botao voltar para o menu perdeu" to="CanvasLayer" method="_on_botao_voltar_para_o_menu_perdeu_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pausar" to="CanvasLayer" method="_on_pausar_pressed"]

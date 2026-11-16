@@ -16,9 +16,12 @@ func _on_botao_lixo_pressed() -> void:
 
 
 func _on_chave_philips_pressed() -> void:
+	Global.tocar_sfx("res://Musicas/pega chave de fenda.mp3")
 	Global.tem_chave_philips = true
 	Global.chave_philips_coletada = true
 	$"Chave philips".visible = false
+	$Fenda.visible = true
+	$"Fenda/Timer fenda".start()
 	
 
 
@@ -36,3 +39,15 @@ func _on_botao_despausar_pressed() -> void:
 	$"Botao Cenario 3".visible = true
 	if Global.chave_philips_coletada == false:
 		$"Chave philips".visible = true
+
+
+func _on_botao_voltar_para_o_menu_perdeu_pressed() -> void:
+	$"Chave philips".visible = true
+
+
+func _on_botao_voltar_para_o_menu_pausa_pressed() -> void:
+	$"Chave philips".visible = true
+
+
+func _on_timer_fenda_timeout() -> void:
+	$Fenda.visible = false

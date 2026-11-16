@@ -33,16 +33,17 @@ expand = true
 
 [node name="Button" type="Button" parent="." unique_id=1410492033]
 propagate_maximum_size = true
+clip_contents = true
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 10.0
-offset_top = -213.0
-offset_right = 129.5
-offset_bottom = -113.0
+offset_left = 1.0
+offset_top = -100.0
+offset_right = 74.33333
+offset_bottom = -27.333313
 grow_vertical = 0
-scale = Vector2(2, 2)
+scale = Vector2(1.5, 1.5)
 icon = SubResource("AtlasTexture_qbr0e")
 flat = true
 icon_alignment = 1

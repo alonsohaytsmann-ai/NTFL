@@ -46,6 +46,7 @@
 [ext_resource type="Texture2D" uid="uid://28p2bif2hu3h" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa24.png" id="44_oprj0"]
 [ext_resource type="Texture2D" uid="uid://2ibemrq5xufi" path="res://Sprites/imagens tutorial/Notebook.png" id="45_re7gg"]
 [ext_resource type="FontFile" uid="uid://d32tsijie0urt" path="res://Fonte/PressStart2P-Regular.ttf" id="46_dwlfn"]
+[ext_resource type="Texture2D" uid="uid://b3l08c0vfxswr" path="res://Sprites/imagens menu/Sair-buttom.png" id="47_dwlfn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
 animations = [{
@@ -195,7 +196,7 @@ border_width_left = 10
 border_width_top = 10
 border_width_right = 10
 border_width_bottom = 10
-border_color = Color(1, 0.94509804, 0.8901961, 1)
+border_color = Color(0.92156863, 0.8980392, 0.9019608, 1)
 border_blend = true
 
 [node name="Control" type="Control" unique_id=1628821298]
@@ -253,9 +254,9 @@ expand_mode = 1
 
 [node name="Label2" type="Label" parent="TextureRect" unique_id=1297007807]
 layout_mode = 0
-offset_left = -66.0
+offset_left = -73.0
 offset_top = -152.0
-offset_right = 534.0
+offset_right = 527.0
 offset_bottom = -8.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("46_dwlfn")
@@ -287,6 +288,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_g4v7s")
+
+[node name="Sair" type="Button" parent="." unique_id=385236970]
+visible = false
+layout_mode = 0
+offset_left = 694.0
+offset_top = 498.0
+offset_right = 813.0
+offset_bottom = 547.0
+icon = ExtResource("47_dwlfn")
+flat = true
 
 [connection signal="animation_finished" from="fundo/animacao fundo" to="." method="_on_animacao_fundo_animation_finished"]
 [connection signal="pressed" from="Proximo" to="." method="_on_proximo_pressed"]

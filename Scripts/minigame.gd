@@ -101,6 +101,7 @@ func _on_botao_direito_pressed():
 	checar_resposta(false)
 
 func _on_sair_finalizado_pressed() -> void:
+	Global.tocar_sfx("res://Musicas/lista.wav")
 	await Fader.fade_in(0.5)
 	get_tree().change_scene_to_file("res://Cenarios/Cenario3.tscn")
 	Global.minigameLista_vencido = true

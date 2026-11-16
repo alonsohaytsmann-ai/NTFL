@@ -13,4 +13,5 @@ func _process(delta: float) -> void:
 
 
 func _on_sair_pressed() -> void:
+	await Fader.fade_in(0.5)
 	get_tree().change_scene_to_file("res://Cenarios/Cenario4.tscn")

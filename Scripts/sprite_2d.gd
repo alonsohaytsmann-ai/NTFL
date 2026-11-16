@@ -25,7 +25,6 @@ var indice_atual = 0
 func _ready() -> void:
 	carregar_desafio()
 	mensagem_padrao()
-	Fader
 
 func _process(_delta):
 	if dragging:
@@ -61,6 +60,7 @@ func verificar_resposta(lixeira_escolhida: int):
 	var desafio_atual = desafios[indice_atual]
 
 	if lixeira_escolhida == desafio_atual["lixeira_correta"]:
+		Global.tocar_sfx("res://Musicas/lixo.mp3")
 		texto_mensagem.text = "Acertou!"
 		texto_mensagem.modulate = Color(0, 1, 0)  
 		indice_atual += 1
@@ -95,4 +95,6 @@ func fim_de_jogo():
 	$"../Lixo1".visible = false
 	Global.minigameLixo_vencido = true
 	$"../Mensagem".visible = false
+	$"../Label".visible = false
+	$"../Label2".visible = false
 	hide()

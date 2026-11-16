@@ -46,6 +46,7 @@
 [ext_resource type="Texture2D" uid="uid://28p2bif2hu3h" path="res://Sprites/Menu-Tutorial/seta animação/seta_completa24.png" id="44_hyxkm"]
 [ext_resource type="Texture2D" uid="uid://d4m6ldsdfcji" path="res://Sprites/imagens tutorial/PC.png" id="45_pwkls"]
 [ext_resource type="FontFile" uid="uid://d32tsijie0urt" path="res://Fonte/PressStart2P-Regular.ttf" id="46_kwhkk"]
+[ext_resource type="Texture2D" uid="uid://b3l08c0vfxswr" path="res://Sprites/imagens menu/Sair-buttom.png" id="47_f07eo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
 animations = [{
@@ -195,7 +196,7 @@ border_width_left = 10
 border_width_top = 10
 border_width_right = 10
 border_width_bottom = 10
-border_color = Color(1, 0.94509804, 0.8901961, 1)
+border_color = Color(0.92941177, 0.8980392, 0.9019608, 1)
 border_blend = true
 
 [node name="Control" type="Control" unique_id=289928650]
@@ -286,13 +287,24 @@ offset_bottom = -30.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("46_kwhkk")
 theme_override_font_sizes/font_size = 12
-text = "\"Aqui o objetivo é clicar nos ícones vermelhos, 
+text = "Aqui o objetivo é clicar nos ícones vermelhos, 
 que mudam de posição constantemente. Se você
 pressioná-lo 10 vezes, ganhará o minigame!
 
 ATENÇÃO: Cuidado para não apertar o botão com o 
 ícone de caveira; caso você o pressione 3 vezes, 
-perderá o jogo!\""
+perderá o jogo!"
+
+[node name="Sair" type="Button" parent="." unique_id=328761150]
+visible = false
+layout_mode = 0
+offset_left = 692.0
+offset_top = 505.0
+offset_right = 811.0
+offset_bottom = 554.0
+icon = ExtResource("47_f07eo")
+flat = true
 
 [connection signal="animation_finished" from="fundo/animacao fundo" to="." method="_on_animacao_fundo_animation_finished"]
 [connection signal="pressed" from="Proximo" to="." method="_on_proximo_pressed"]
+[connection signal="pressed" from="Sair" to="." method="_on_sair_pressed"]

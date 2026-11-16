@@ -37,8 +37,9 @@ func _on_porta_cenario_4_pressed() -> void:
 	if Global.tem_chave == true or Global.porta_cenario4_aberta == true:
 		$Porta_Cenario4.visible = false
 		$"Porta_Cenario4 2#".visible = true
-		await Fader.fade_in(0.5)
+		Global.tocar_sfx("res://Musicas/usar chave.mp3")
 		Global.tocar_sfx("res://Musicas/porta.mp3")
+		await Fader.fade_in(0.5)
 		get_tree().change_scene_to_file("res://Cenarios/Cenario4.tscn")
 		Global.porta_cenario4_aberta = true
 		Global.tem_chave = false
@@ -61,6 +62,7 @@ func _on_timer_porta_timeout() -> void:
 	$"Porta bloqueada".visible = false
 
 func _on_porta_cenario_4_2_pressed() -> void:
+	Global.tocar_sfx("res://Musicas/porta.mp3")
 	await Fader.fade_in(0.5)
 	get_tree().change_scene_to_file("res://Cenarios/Cenario4.tscn")
 
@@ -80,11 +82,13 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_gaveta_1_pressed() -> void:
+	Global.tocar_sfx("res://Musicas/abrindo.mp3")
 	gaveta1 = true
 	$"Gaveta 1".visible = false
 	$Gaveta01.visible = true
 	
 	if Global.chave_coletada == false:
+		Global.tocar_sfx("res://Musicas/pegachave.wav")
 		Global.tem_chave = true
 		Global.chave_coletada = true
 		$"Chave possuida".visible = true
@@ -93,18 +97,21 @@ func _on_gaveta_1_pressed() -> void:
 	atualizar_fundo()
 
 func _on_gaveta_2_pressed() -> void:
+	Global.tocar_sfx("res://Musicas/abrindo.mp3")
 	gaveta2 = true
 	$"Gaveta 2".visible = false
 	$Gaveta02.visible = true
 	atualizar_fundo()
 
 func _on_gaveta_01_pressed() -> void:
+	Global.tocar_sfx("res://Musicas/fechando2.mp3")
 	gaveta1 = false
 	$"Gaveta 1".visible = true
 	$Gaveta01.visible = false
 	atualizar_fundo()
 
 func _on_gaveta_02_pressed() -> void:
+	Global.tocar_sfx("res://Musicas/fechando2.mp3")
 	gaveta2 = false
 	$"Gaveta 2".visible = true
 	$Gaveta02.visible = false

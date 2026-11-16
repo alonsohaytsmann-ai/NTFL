@@ -124,11 +124,11 @@ anchor_bottom = 0.5
 offset_left = -160.0
 offset_top = 165.5
 offset_right = 160.0
-offset_bottom = 188.5
+offset_bottom = 181.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("4_e1wnu")
-text = "VOCE PEGOU UMA CHAVE"
+text = "VOCÊ PEGOU UMA CHAVE"
 
 [node name="Timer chave" type="Timer" parent="Chave possuida" unique_id=252004122]
 one_shot = true

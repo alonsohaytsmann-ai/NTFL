@@ -4,6 +4,7 @@ extends Control
 func _ready() -> void:
 	Fader.fade_out(0.5)
 func _on_voltar_pressed() -> void:
+	Global.tocar_sfx("res://Musicas/lista.wav")
 	await Fader.fade_in(0.5)
 	get_tree().change_scene_to_file("res://Cenarios/tela_do_menu.tscn")
 
@@ -37,21 +38,26 @@ func _on_animacao_impossivel_animation_finished() -> void:
 
 
 func _on_facil_pressed() -> void:
+	Global.tocar_sfx("res://Musicas/check.mp3")
 	$"animacao facil".play("default")
 
 
 func _on_medio_pressed() -> void:
+	Global.tocar_sfx("res://Musicas/check.mp3")
 	$"animacao medio".play("default")
 
 
 func _on_dificil_pressed() -> void:
+	Global.tocar_sfx("res://Musicas/check.mp3")
 	$"animacao dificil".play("default")
 
 
 func _on_impossivel_pressed() -> void:
+	Global.tocar_sfx("res://Musicas/check.mp3")
 	$"animacao impossivel".play("default")
 
 
 func _on_tutorial_pressed() -> void:
+	Global.tocar_sfx("res://Musicas/lista.wav")
 	await Fader.fade_in(0.5)
 	get_tree().change_scene_to_file("res://Cenarios/Tutorial interface.tscn")

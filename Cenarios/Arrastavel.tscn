@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://gu2xejokwh0g" path="res://Sprites/imagens lixo/lixeira-correta.png" id="3_88ot5"]
 [ext_resource type="Texture2D" uid="uid://becwk1pi4tbsd" path="res://Sprites/imagens lixo/lixeira-errada.png" id="4_6csx1"]
 [ext_resource type="FontFile" uid="uid://d32tsijie0urt" path="res://Fonte/PressStart2P-Regular.ttf" id="7_6csx1"]
-[ext_resource type="Script" uid="uid://0yjp8byagqol" path="res://Scripts/timer.gd" id="8_vsjip"]
+[ext_resource type="Script" uid="uid://0yjp8byagqol" path="res://Scripts/interface.gd" id="8_vsjip"]
 [ext_resource type="Texture2D" uid="uid://ci5pl4ak2bes4" path="res://Sprites/imagens menu perder/menu-perder.png" id="9_gdxno"]
 [ext_resource type="Texture2D" uid="uid://co8vr0b821jpu" path="res://Sprites/imagens desligar pc/bloco-minigame1.png" id="10_k1dew"]
 [ext_resource type="Texture2D" uid="uid://damkjpnas6fww" path="res://Sprites/lista global/Lista-principal.png" id="11_yk2qq"]
@@ -437,6 +437,47 @@ theme_override_fonts/font = ExtResource("7_6csx1")
 theme_override_font_sizes/font_size = 40
 vertical_alignment = 1
 
+[node name="Label" type="Label" parent="." unique_id=305655836]
+layout_mode = 0
+offset_left = 221.0
+offset_top = 436.0
+offset_right = 359.0
+offset_bottom = 471.0
+theme_override_fonts/font = ExtResource("7_6csx1")
+theme_override_font_sizes/font_size = 11
+text = "Eletronico"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="." unique_id=816388198]
+layout_mode = 0
+offset_left = 830.0
+offset_top = 443.0
+offset_right = 900.0
+offset_bottom = 466.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_6csx1")
+theme_override_font_sizes/font_size = 14
+text = "Comum"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Tutorial" type="Button" parent="." unique_id=1624203350]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.069000006
+anchor_bottom = 0.046000004
+offset_left = 1101.0
+offset_right = 1072.512
+offset_bottom = 21.191998
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_6csx1")
+theme_override_font_sizes/font_size = 43
+text = "?"
+flat = true
+
 [connection signal="body_entered" from="Lixo1/Area1" to="Arrastavel" method="_on_area_1_body_entered"]
 [connection signal="body_entered" from="Lixo2/Area2" to="Arrastavel" method="_on_area_2_body_entered"]
 [connection signal="button_down" from="Arrastavel/CollisionShape2D/Button" to="Arrastavel" method="_on_button_button_down"]
@@ -445,7 +486,7 @@ vertical_alignment = 1
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Botao despausar" to="CanvasLayer" method="_on_botao_despausar_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Botao voltar para o menu pausa" to="CanvasLayer" method="_on_botao_voltar_para_o_menu_pausa_pressed"]
 [connection signal="pressed" from="CanvasLayer/Botao Lista" to="CanvasLayer" method="_on_botao_lista_pressed"]
-[connection signal="pressed" from="CanvasLayer/Papelzao/Voltar" to="CanvasLayer" method="_on_voltar_pressed"]
 [connection signal="pressed" from="CanvasLayer/Papelzao/Voltar" to="CanvasLayer" method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Papelzao/Voltar" to="CanvasLayer" method="_on_voltar_pressed"]
 [connection signal="pressed" from="CanvasLayer/Botao voltar para o menu perdeu" to="CanvasLayer" method="_on_botao_voltar_para_o_menu_perdeu_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pausar" to="CanvasLayer" method="_on_pausar_pressed"]

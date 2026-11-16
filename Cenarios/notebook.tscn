@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cvc341m4dmums" path="res://Sprites/imagens minigame rodrigo 2/Parafuso-maior3.png" id="6_jgqkt"]
 [ext_resource type="Texture2D" uid="uid://ccjafka1wdnqc" path="res://Sprites/imagens minigame rodrigo 2/Parafuso-maior4.png" id="7_rycwx"]
 [ext_resource type="Texture2D" uid="uid://b32hs5ihglig7" path="res://Sprites/imagens minigame rodrigo 2/Parafuso-maior5.png" id="8_g4vol"]
-[ext_resource type="Script" uid="uid://0yjp8byagqol" path="res://Scripts/timer.gd" id="11_hmxq4"]
+[ext_resource type="Script" uid="uid://0yjp8byagqol" path="res://Scripts/interface.gd" id="11_hmxq4"]
 [ext_resource type="Texture2D" uid="uid://c0iofhi6ex5q5" path="res://Sprites/imagens minigame rodrigo 2/Click-0001.png" id="11_we7o8"]
 [ext_resource type="Texture2D" uid="uid://ci5pl4ak2bes4" path="res://Sprites/imagens menu perder/menu-perder.png" id="12_i3sdk"]
 [ext_resource type="Texture2D" uid="uid://v72tesjwqmkx" path="res://Sprites/imagens minigame rodrigo 2/Click-0002.png" id="12_i21o5"]
@@ -26,7 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://isd1oqa85rhm" path="res://Sprites/imagens cenario 2/chave-saida.png" id="19_n7j2m"]
 [ext_resource type="Texture2D" uid="uid://7n5oukn1ic4s" path="res://Sprites/imagens cenario 2/Chave-de-fenda.png" id="20_ewfwt"]
 [ext_resource type="Texture2D" uid="uid://cgyq6vrrrynb7" path="res://Sprites/lista global/Pausar.png" id="22_i21o5"]
-[ext_resource type="Texture2D" uid="uid://2ca63uysvnbk" path="res://Sprites/Vitoria/Victory.png" id="27_n7j2m"]
+[ext_resource type="Texture2D" uid="uid://ciauhkbx0422x" path="res://Sprites/Vitoria/Victory.png" id="27_n7j2m"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yf5fn"]
 animations = [{
@@ -167,6 +167,8 @@ position = Vector2(723, -104)
 scale = Vector2(1.344005, 1.2841574)
 sprite_frames = SubResource("SpriteFrames_i210l")
 animation = &"girando"
+frame = 14
+frame_progress = 1.0
 
 [node name="Button4" type="Button" parent="." unique_id=771153106]
 layout_mode = 1
@@ -228,7 +230,9 @@ offset_top = 136.0
 offset_right = 19.0
 offset_bottom = 167.0
 grow_horizontal = 2
-text = "Sair"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("14_8yi57")
+text = "SAIR"
 
 [node name="CanvasLayer" type="Control" parent="." unique_id=300292328]
 process_mode = 3
@@ -240,6 +244,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("11_hmxq4")
+metadata/_edit_lock_ = true
 
 [node name="Panel" type="Panel" parent="CanvasLayer" unique_id=1880786632]
 visible = false
@@ -546,7 +551,7 @@ vertical_alignment = 1
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Botao despausar" to="CanvasLayer" method="_on_botao_despausar_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Botao voltar para o menu pausa" to="CanvasLayer" method="_on_botao_voltar_para_o_menu_pausa_pressed"]
 [connection signal="pressed" from="CanvasLayer/Botao Lista" to="CanvasLayer" method="_on_botao_lista_pressed"]
-[connection signal="pressed" from="CanvasLayer/Papelzao/Voltar" to="CanvasLayer" method="_on_voltar_pressed"]
 [connection signal="pressed" from="CanvasLayer/Papelzao/Voltar" to="CanvasLayer" method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Papelzao/Voltar" to="CanvasLayer" method="_on_voltar_pressed"]
 [connection signal="pressed" from="CanvasLayer/Botao voltar para o menu perdeu" to="CanvasLayer" method="_on_botao_voltar_para_o_menu_perdeu_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pausar" to="CanvasLayer" method="_on_pausar_pressed"]

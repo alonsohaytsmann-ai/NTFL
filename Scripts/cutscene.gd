@@ -15,6 +15,7 @@ func _on_video_stream_player_finished() -> void:
 
 
 func _on_button_pressed() -> void:
+	Global.tocar_sfx("res://Musicas/button.mp3")
 	await Fader.fade_in(0.5)
 	Global.tocar_musica_dificuldade()
 	get_tree().change_scene_to_file("res://Cenarios/Cenario1.tscn")

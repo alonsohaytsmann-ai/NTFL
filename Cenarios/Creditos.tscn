@@ -18,6 +18,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_ed3ks")
+metadata/_edit_lock_ = true
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1412326048]
 layout_mode = 1
@@ -44,23 +45,23 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_x6jei")
 theme_override_font_sizes/font_size = 25
-text = "CREDITOS
+text = "CRÉDITOS
 
 RESPONSAVEL PELO CODIGO:
 Alonso Freitas Haytsmann
-Rodrigo Santos
+Rodrigo Santos Araujo
 
-RESPONSAVEL PELAS SPRITES:
-Tiago Tramontim De Paula
+RESPONSÁVEL PELAS SPRITES:
+Tiago Tramontin De Paula
 
-RESPONSAVEL PELO SITE:
+RESPONSÁVEL PELO SITE:
 Leonardo Carvalho Dorti
 
-RESPONSAVEL PELA DOCUMENTAÇÃO:
+RESPONSÁVEL PELA DOCUMENTAÇÃO:
 Erick Araujo Braz
 
-RESPONSAVEL PELA TRILHA SONORA:
-Rodrigo Santos"
+RESPONSÁVEL PELA TRILHA SONORA:
+Rodrigo Santos Araujo"
 label_settings = SubResource("LabelSettings_g4v7s")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -69,10 +70,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="TextureRect/Label" unique_id=903043303]
 layout_mode = 0
-offset_left = -9.0
-offset_top = 515.0
-offset_right = 150.0
-offset_bottom = 567.0
+offset_left = -21.0
+offset_top = 503.0
+offset_right = 138.0
+offset_bottom = 555.0
 theme_override_fonts/font = ExtResource("2_x6jei")
 icon = ExtResource("4_vs4bl")
 flat = true

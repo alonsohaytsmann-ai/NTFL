@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d0rg4yavgxrb3"
+path="res://.godot/imported/clicar aparafuso.mp3-50f636f1f2fe034f87b93ba4969d9f3e.mp3str"
+
+[deps]
+
+source_file="res://Musicas/clicar aparafuso.mp3"
+dest_files=["res://.godot/imported/clicar aparafuso.mp3-50f636f1f2fe034f87b93ba4969d9f3e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

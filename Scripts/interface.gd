@@ -42,9 +42,10 @@ func _finalizar_jogo(venceu: bool) -> void:
 	if venceu:
 		Global.tocar_musica_vitoria()
 		$Vitoria.visible = true
+		$Vitoria/pontos.visible = true
 		$Vitoria.move_to_front()
 		if Global.has_method("calcular_pontuacao"):
-			$Vitoria/pontos.text = str(Global.calcular_pontuacao())
+			$Vitoria/pontos.text = "" + str(Global.calcular_pontuacao())
 	else:
 		Global.tocar_musica_derrota()
 		$"Fim de jogo".visible = true
@@ -69,6 +70,7 @@ func _atualizar_checks_do_papelzao() -> void:
 func _resetar_jogo() -> void:
 	Global.tem_chave = false
 	Global.tem_chave_philips = false
+	Global.chave_philips_coletada = false
 	Global.chave_coletada = false
 	Global.porta_cenario4_aberta = false
 	Global.minigamePc_vencido = false
@@ -84,26 +86,32 @@ func _on_botao_voltar_para_o_menu_pausa_pressed() -> void:
 	_voltar_ao_menu()
 
 func _voltar_ao_menu() -> void:
-	_resetar_jogo()
 	Global._musica_menu()
+	_resetar_jogo()
 	get_tree().change_scene_to_file("res://Cenarios/tela_do_menu.tscn")
 	Fader.fade_out(0.5)
 
 func _on_pausar_pressed() -> void:
-	get_tree().paused = true
+	Global.pausar_musica(true)
+	get_tree().paused = true  
 	_esconder_hud()
+	Global.tocar_sfx("res://Musicas/pausar.mp3")
 	_fade_in_elementos([$Panel, $VBoxContainer, $Pausado])
 
 func _on_botao_despausar_pressed() -> void:
+	Global.tocar_sfx("res://Musicas/despausar.mp3")
+	Global.pausar_musica(false)
 	get_tree().paused = false
 	_fade_out_elementos([$Panel, $VBoxContainer, $Pausado])
 	_mostrar_hud()
 
 func _on_botao_lista_pressed() -> void:
+	Global.tocar_sfx("res://Musicas/lista.wav")
 	_esconder_hud()
 	_fade_in_elementos([$Panel, $Papelzao])
 
 func _on_voltar_pressed() -> void:
+	Global.tocar_sfx("res://Musicas/lista.wav")
 	_fade_out_elementos([$Panel, $Papelzao])
 	_mostrar_hud()
 

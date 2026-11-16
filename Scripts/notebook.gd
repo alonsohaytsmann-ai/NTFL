@@ -35,6 +35,7 @@ func _process(delta: float) -> void:
 	$CanvasLayer/inventario.visible = false
 
 func _on_parafuso_clicado(botao: Button) -> void:
+	Global.tocar_sfx("res://Musicas/clicar aparafuso.mp3")
 	if chavinha.visible or animando:
 		return
 		
@@ -96,7 +97,7 @@ func _processar_acerto() -> void:
 		
 	chavinha.visible = false
 	animando = true
-
+	Global.tocar_sfx("res://Musicas/parafuso.mp3")
 	parafuso.play("girando")
 	await parafuso.animation_finished
 	parafuso.visible = false
@@ -111,6 +112,7 @@ func _processar_acerto() -> void:
 
 	if restantes <= 0:
 		print("acabo")
+		$Venceu.visible = true
 		Global.minigameNotebook_vencido = true
 		tela_venceu.visible = true
 
@@ -120,6 +122,7 @@ func _tocar_animacao_sumir(botao: Button) -> void:
 	parafusinho.visible = true
 	parafusinho.stop()
 	parafusinho.frame = 0
+	Global.tocar_sfx("res://Musicas/sumiu.mp3")
 	parafusinho.play("default")
 	await parafusinho.animation_finished
 	parafusinho.visible = false

@@ -47,6 +47,7 @@
 [ext_resource type="FontFile" uid="uid://d32tsijie0urt" path="res://Fonte/PressStart2P-Regular.ttf" id="45_qetuq"]
 [ext_resource type="Texture2D" uid="uid://c6hiyo6tks86g" path="res://Sprites/imagens tutorial/Lixo.png" id="46_thly0"]
 [ext_resource type="Texture2D" uid="uid://dehugv1tt8u1q" path="res://Sprites/imagens tutorial/seta2.png" id="47_1enku"]
+[ext_resource type="Texture2D" uid="uid://b3l08c0vfxswr" path="res://Sprites/imagens menu/Sair-buttom.png" id="48_thly0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
 animations = [{
@@ -196,7 +197,7 @@ border_width_left = 10
 border_width_top = 10
 border_width_right = 10
 border_width_bottom = 10
-border_color = Color(1, 0.94509804, 0.8901961, 1)
+border_color = Color(0.92941177, 0.8980392, 0.9019608, 1)
 border_blend = true
 
 [node name="Control" type="Control" unique_id=1722344811]
@@ -252,14 +253,6 @@ offset_bottom = 464.0
 texture = ExtResource("46_thly0")
 expand_mode = 1
 
-[node name="TextureRect2" type="TextureRect" parent="TextureRect" unique_id=1201837858]
-layout_mode = 0
-offset_left = 94.0
-offset_top = 242.0
-offset_right = 134.0
-offset_bottom = 282.0
-texture = ExtResource("47_1enku")
-
 [node name="PanelContainer" type="PanelContainer" parent="TextureRect" unique_id=1715838343]
 layout_mode = 1
 anchors_preset = 15
@@ -269,6 +262,14 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_g4v7s")
 metadata/_edit_lock_ = true
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect" unique_id=1201837858]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 242.0
+offset_right = 133.0
+offset_bottom = 282.0
+texture = ExtResource("47_1enku")
 
 [node name="TextureRect3" type="TextureRect" parent="TextureRect" unique_id=1423510218]
 layout_mode = 0
@@ -294,9 +295,9 @@ vertical_alignment = 1
 
 [node name="Label4" type="Label" parent="TextureRect" unique_id=1612692017]
 layout_mode = 0
-offset_left = 261.0
+offset_left = 264.0
 offset_top = 284.0
-offset_right = 417.0
+offset_right = 420.0
 offset_bottom = 307.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("45_qetuq")
@@ -314,7 +315,7 @@ theme_override_fonts/font = ExtResource("45_qetuq")
 theme_override_font_sizes/font_size = 12
 text = "Aqui, o objetivo é arrastar o lixo que aparecer na 
 tela e escolher a lixeira correta para descartá-lo. 
-Assim que você fizer isso 8 vezes, o jogo acaba"
+Assim que você fizer isso 8 vezes, o jogo acaba!"
 
 [node name="Label" type="Label" parent="TextureRect" unique_id=1861549664]
 layout_mode = 0
@@ -325,6 +326,16 @@ offset_bottom = -138.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("45_qetuq")
 text = "Minigame lixeira:"
+
+[node name="Sair" type="Button" parent="." unique_id=1941036659]
+visible = false
+layout_mode = 0
+offset_left = 694.0
+offset_top = 498.0
+offset_right = 813.0
+offset_bottom = 547.0
+icon = ExtResource("48_thly0")
+flat = true
 
 [connection signal="animation_finished" from="fundo/animacao fundo" to="." method="_on_animacao_fundo_animation_finished"]
 [connection signal="pressed" from="Proximo" to="." method="_on_proximo_pressed"]

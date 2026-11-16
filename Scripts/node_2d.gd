@@ -1,7 +1,5 @@
 extends Control
 
-
-
 func _ready() -> void:
 	Fader.fade_out(0.5)
 	if Global.minigameLista_vencido:
@@ -12,7 +10,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
 func _on_button_pressed() -> void:
 	Global.tocar_sfx("res://Musicas/porta.mp3")
 	await Fader.fade_in(0.5)
@@ -20,6 +17,7 @@ func _on_button_pressed() -> void:
 
 
 func _on_button_2_pressed() -> void:
+	Global.tocar_sfx("res://Musicas/lista.wav")
 	await Fader.fade_in(0.5)
 	get_tree().change_scene_to_file("res://Cenarios/minigame.tscn")
 

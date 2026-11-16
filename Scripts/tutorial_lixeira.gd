@@ -21,6 +21,8 @@ func _on_proximo_pressed() -> void:
 	anim.visible = true
 	anim.play("default")
 	create_tween().tween_property(anim, "modulate:a", 1.0, 0.3)
+	await get_tree().create_timer(0.2).timeout
+	Global.tocar_sfx("res://Musicas/papel 3.mp3")
 
 
 func _on_animacao_fundo_animation_finished() -> void:

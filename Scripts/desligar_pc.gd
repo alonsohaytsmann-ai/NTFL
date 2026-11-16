@@ -25,5 +25,15 @@ func _on_tentar_de_novo_pressed() -> void:
 
 
 func _on_sair_se_ganhou_pressed() -> void:
+	Global.tocar_sfx("res://Musicas/desligarpc.mp3")
 	await Fader.fade_in(0.5)
 	get_tree().change_scene_to_file("res://Cenarios/Cenario1.tscn")
+
+
+func _on_tutorial_pressed() -> void:
+	await Fader.fade_in(0.5)
+	$Control.process_mode = Node.PROCESS_MODE_ALWAYS
+	$Control.visible = true
+	Global.pausar_musica(true)
+	get_tree().paused = true
+	Fader.fade_out(0.5)

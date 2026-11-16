@@ -7,9 +7,10 @@
 [ext_resource type="Script" uid="uid://dvqfbuoxny2w0" path="res://Scripts/button.gd" id="4_60s2y"]
 [ext_resource type="Texture2D" uid="uid://dyod3lj13off4" path="res://Sprites/imagens desligar pc/botao-bem2.png" id="4_xfncy"]
 [ext_resource type="Texture2D" uid="uid://co8vr0b821jpu" path="res://Sprites/imagens desligar pc/bloco-minigame1.png" id="5_60s2y"]
+[ext_resource type="Texture2D" uid="uid://x8h6tpd06l0i" path="res://Sprites/imagens desligar pc/botao-mau2.png" id="5_pb335"]
 [ext_resource type="Texture2D" uid="uid://b2bx7hoep6cvu" path="res://Sprites/imagens desligar pc/botao-bem1.png" id="6_wwxnx"]
 [ext_resource type="FontFile" uid="uid://d32tsijie0urt" path="res://Fonte/PressStart2P-Regular.ttf" id="8_tyq8e"]
-[ext_resource type="Script" uid="uid://0yjp8byagqol" path="res://Scripts/timer.gd" id="9_32shg"]
+[ext_resource type="Script" uid="uid://0yjp8byagqol" path="res://Scripts/interface.gd" id="9_32shg"]
 [ext_resource type="Texture2D" uid="uid://ci5pl4ak2bes4" path="res://Sprites/imagens menu perder/menu-perder.png" id="10_wwxnx"]
 [ext_resource type="Texture2D" uid="uid://damkjpnas6fww" path="res://Sprites/lista global/Lista-principal.png" id="11_l2ev7"]
 [ext_resource type="Texture2D" uid="uid://bpc8448m1vy3k" path="res://Sprites/imagens menu dificuldade/confere-lista6.png" id="12_5nyhs"]
@@ -18,10 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://dikwypeci52en" path="res://Sprites/Inventario/inventario-para-item.png" id="14_oyu6m"]
 [ext_resource type="Texture2D" uid="uid://isd1oqa85rhm" path="res://Sprites/imagens cenario 2/chave-saida.png" id="15_fiflj"]
 [ext_resource type="Texture2D" uid="uid://7n5oukn1ic4s" path="res://Sprites/imagens cenario 2/Chave-de-fenda.png" id="16_vk2x7"]
-[ext_resource type="Texture2D" uid="uid://2ca63uysvnbk" path="res://Sprites/Vitoria/Victory.png" id="19_5nyhs"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_r7rci"]
-load_path = "res://.godot/imported/botao-mau2.png-0c48d520fda59a230283d41c2e5d2190.ctex"
+[ext_resource type="Texture2D" uid="uid://ciauhkbx0422x" path="res://Sprites/Vitoria/Victory.png" id="19_5nyhs"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o6fnk"]
 bg_color = Color(0.2784314, 0.2784314, 0.2784314, 0.7294118)
@@ -75,7 +73,7 @@ offset_right = 384.0
 offset_bottom = 481.0
 button_mask = 7
 texture_normal = ExtResource("2_ktnyr")
-texture_pressed = SubResource("CompressedTexture2D_r7rci")
+texture_pressed = ExtResource("5_pb335")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("2_koe1e")
@@ -157,6 +155,20 @@ offset_bottom = 129.0
 theme_override_fonts/font = ExtResource("8_tyq8e")
 text = "SAIR"
 
+[node name="Tutorial" type="Button" parent="." unique_id=969299646]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.069000006
+anchor_bottom = 0.046000004
+offset_left = 1101.0
+offset_right = 1072.512
+offset_bottom = 21.191998
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_tyq8e")
+theme_override_font_sizes/font_size = 43
+text = "?"
+flat = true
+
 [node name="CanvasLayer" type="Control" parent="." unique_id=300292328]
 process_mode = 3
 layout_mode = 1
@@ -167,6 +179,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("9_32shg")
+metadata/_edit_lock_ = true
 
 [node name="Panel" type="Panel" parent="CanvasLayer" unique_id=1880786632]
 visible = false
@@ -251,6 +264,7 @@ theme_override_font_sizes/font_size = 25
 text = "VOLTAR PARA O MENU"
 
 [node name="Botao Lista" type="TextureButton" parent="CanvasLayer" unique_id=200428986]
+visible = false
 layout_mode = 0
 offset_left = 1048.0
 offset_right = 1151.0
@@ -258,6 +272,17 @@ offset_bottom = 120.0
 texture_normal = ExtResource("11_l2ev7")
 ignore_texture_size = true
 stretch_mode = 3
+
+[node name="Label" type="Label" parent="CanvasLayer/Botao Lista" unique_id=409602222]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 10.0
+offset_right = 95.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.0035191667, 0.0035191681, 0.0035191672, 1)
+theme_override_fonts/font = ExtResource("8_tyq8e")
+theme_override_font_sizes/font_size = 13
+text = "TAREFAS"
 
 [node name="Papelzao" type="TextureRect" parent="CanvasLayer" unique_id=1678903716]
 visible = false
@@ -456,7 +481,6 @@ grow_vertical = 2
 texture = ExtResource("19_5nyhs")
 
 [node name="pontos" type="Label" parent="CanvasLayer/Vitoria" unique_id=425545707]
-visible = false
 layout_mode = 0
 offset_left = 706.0
 offset_top = 455.0
@@ -470,10 +494,11 @@ vertical_alignment = 1
 [connection signal="pressed" from="Label2/Sair se ganhou" to="." method="_on_sair_se_ganhou_pressed"]
 [connection signal="pressed" from="Label/Tentar de novo" to="." method="_on_tentar_de_novo_pressed"]
 [connection signal="pressed" from="Label/Sair se perdeu" to="." method="_on_sair_se_perdeu_pressed"]
+[connection signal="pressed" from="Tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Botao despausar" to="CanvasLayer" method="_on_botao_despausar_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Botao voltar para o menu pausa" to="CanvasLayer" method="_on_botao_voltar_para_o_menu_pausa_pressed"]
 [connection signal="pressed" from="CanvasLayer/Botao Lista" to="CanvasLayer" method="_on_botao_lista_pressed"]
-[connection signal="pressed" from="CanvasLayer/Papelzao/Voltar" to="CanvasLayer" method="_on_voltar_pressed"]
 [connection signal="pressed" from="CanvasLayer/Papelzao/Voltar" to="CanvasLayer" method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Papelzao/Voltar" to="CanvasLayer" method="_on_voltar_pressed"]
 [connection signal="pressed" from="CanvasLayer/Botao voltar para o menu perdeu" to="CanvasLayer" method="_on_botao_voltar_para_o_menu_perdeu_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pausar" to="CanvasLayer" method="_on_pausar_pressed"]
